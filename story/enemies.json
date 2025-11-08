@@ -1,0 +1,75 @@
+{
+  "chapter1": {
+    "battle_smuggler_ambush": [
+      { "name": "走私打手", "job": "Berserker","level" : 1},
+      { "name": "黑市弓手", "job": "Archer","level" : 1 },
+      { "name": "黑巫學徒", "job": "Sorcerer","level" : 1}
+    ],
+    "battle_storage_guards": [
+      { "name": "黑市管事", "job": "Elementalist" ,"level" : 2},
+      { "name": "血罐守衛", "job": "BloodMage","level" : 2},
+      { "name": "黑巫學徒", "job": "Sorcerer" ,"level" : 2}
+    ],
+    "battle_warehouse_sweep": [
+      { "name": "地牢守衛A", "job": "Paladin" ,"level" : 2},
+      { "name": "地牢守衛B", "job": "Paladin" ,"level" : 2},
+      { "name": "地牢守衛C", "job": "Paladin" ,"level" : 2},
+      { "name": "地牢守衛D", "job": "Paladin" ,"level" : 2}
+    ],
+    "battle_ch1_boss": [
+      { "name": "邪惡黑法師", "job": "Sorcerer","level" :  3},
+      { "name": "暗元素祭司", "job": "Elementalist","level" : 3 },
+      { "name": "血衣教教主", "job": "BloodMage","level" : 5 }
+    ]
+  },
+  "chapter2": {
+    "battle_snow_bandits": [
+      { "name": "盜賊頭目", "job": "Assassin","level" : 4 },
+      { "name": "冰霜弓手", "job": "Archer" ,"level" : 3},
+      { "name": "雪地暴徒", "job": "Warrior" ,"level" : 2}
+    ],
+    "battle_palace_gate": [
+      { "name": "王城侍衛長", "job": "Paladin" ,"level" : 7},
+      { "name": "王城劍士", "job": "Warrior" ,"level" : 4},
+      { "name": "王城弓手", "job": "Archer" ,"level" : 4}
+    ],
+    "battle_cold_hall_priests": [
+      { "name": "邪教神官", "job": "BloodMage" ,"level" : 5},
+      { "name": "冷殿祭司", "job": "Elementalist" ,"level" : 5},
+      { "name": "暗影侍從", "job": "Assassin" ,"level" : 6}
+    ],
+    "battle_king_possessed": [
+      { "name": "被附生的國王", "job": "Paladin" ,"level" : 8},
+      { "name": "使徒殘影", "job": "Sorcerer" ,"level" : 15},
+      { "name": "黑環護衛", "job": "Paladin" ,"level" : 7}
+    ]
+  },
+  "chapter3": {
+    "battle_ch3_wave1": [
+      { "name": "變異雪狼", "job": "Warrior", "level": 6 },
+      { "name": "裂甲巨熊", "job": "Berserker", "level": 6 },
+      { "name": "血霧潛獵者", "job": "Assassin", "level": 6 }
+    ],
+    "battle_ch3_mutant_lab": [
+      { "name": "血罐管事", "job": "BloodMage", "level": 7 },
+      { "name": "黑巫侍祭", "job": "Sorcerer", "level": 6 },
+      { "name": "骨刃守衛", "job": "Warrior", "level": 6 }
+    ],
+    "battle_ch3_hasty_attack": [
+      { "name": "祭壇護法", "job": "Paladin", "level": 7 },
+      { "name": "血誓狂徒", "job": "Berserker", "level": 8 },
+      { "name": "暗環術士", "job": "Sorcerer", "level": 8 }
+    ],
+    "battle_ch3_holdout_1": [
+      { "name": "嗜血冰狼", "job": "Warrior", "level": 7 },
+      { "name": "刺背魔鹿", "job": "Berserker", "level": 7 },
+      { "name": "凝霜弓手", "job": "Archer", "level": 6 }
+    ],
+    "battle_ch3_holdout_2": [
+      { "name": "血紋暴熊", "job": "Berserker", "level": 9 },
+      { "name": "陰環祭司", "job": "Elementalist", "level": 8 },
+      { "name": "暗影刃客", "job": "Assassin", "level": 8 }
+    ]
+  }
+
+}

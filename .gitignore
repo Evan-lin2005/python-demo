@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+save/player_data.json
+.DS_Store
+Thumbs.db
+.pytest_cache/
+修改.docx
+優先度.txt

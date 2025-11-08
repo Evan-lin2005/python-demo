@@ -1,0 +1,653 @@
+{
+  "start": "guild_intro",
+  "nodes": {
+    "guild_intro": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】王都的冒險者工會人聲鼎沸，一則緊急委託貼在任務榜最上方。",
+        "【工會接待員】有人在走私『魔獸之血』，近期黑市價飆升。傳聞有人用它做禁忌儀式……",
+        "【勇者】魔獸血會強化黑魔法，若落入邪徒，王都將再陷恐懼。",
+        "【補師】先從供應鏈下手——抓走私者，查來源。",
+        "【弓箭手】據線人說，今夜西市會有一批貨轉手。",
+        "【狂戰士】那就出發，把黑市的牙齒一顆顆敲碎！"
+      ],
+      "choices": [
+        {
+          "text": "立即前往西市埋伏",
+          "goto": "street_track"
+        },
+        {
+          "text": "先打聽更多內情",
+          "goto": "guild_briefing"
+        }
+      ]
+    },
+    "guild_briefing": {
+      "type": "dialog",
+      "lines": [
+        "【工會接待員】我們追過去幾條線，貨都指向『近郊的舊地牢』。",
+        "【工會接待員】還有……城內出現一個新興宗教，鼓吹民眾自願獻血以『恭奉神明』。",
+        "【勇者】魔王封印會因恐懼鬆動，血與恐懼若被導引……會很糟。",
+        "【弓箭手】先在西市抓一個嘴硬的，再逼他帶路。"
+      ],
+      "choices": [
+        {
+          "text": "今晚行動",
+          "goto": "street_track"
+        }
+      ]
+    },
+    "street_track": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】夜色壓低，西市巷道潮濕，暗號與腳步在角落交會。",
+        "【弓箭手】目標現身，三人一組，護著木箱。",
+        "【勇者】動手。"
+      ],
+      "next": "battle_smuggler_ambush"
+    },
+    "battle_smuggler_ambush": {
+      "chapter": "chapter1",
+      "type": "battle",
+      "build": null,
+      "on_win": "post_ambush",
+      "on_lose": "fail_any"
+    },
+    "post_ambush": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】箱中滿是封好的玻璃瓶，暗紅微光蠕動。",
+        "【補師】魔獸血無誤，還有記號……像是配送路線。",
+        "【弓箭手】標註指向近郊地牢的側門入口。",
+        "【勇者】帶一個活口，逼他說出上線與買家。"
+      ],
+      "choices": [
+        {
+          "text": "押解走私犯盤問（可能引戰）",
+          "goto": "interrogate_route"
+        },
+        {
+          "text": "直闖地牢側門",
+          "goto": "dungeon_approach"
+        },
+        {
+          "text": "先掃黑市倉庫",
+          "goto": "warehouse_intro"
+        }
+      ]
+    },
+    "interrogate_route": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】走私犯嘴硬，但一看到你們腰間的工會銅章就腿軟了。",
+        "【走私犯】別、別殺我！貨是從近郊地牢裡出的……裡面堆滿黑魔材！",
+        "【走私犯】還有個『獻血』教團在收集人血，說能『榮耀神明』，我只負責送貨……",
+        "【勇者】地牢與教團，兩條線匯成一條。",
+        "【補師】我們先從地牢查起。"
+      ],
+      "choices": [
+        {
+          "text": "前往地牢側門",
+          "goto": "dungeon_approach"
+        }
+      ]
+    },
+    "warehouse_intro": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】黑市倉庫裡堆滿骨燭、腐黑藥草與不祥粉末。",
+        "【弓箭手】這數量，足以維持多處儀式。",
+        "【補師】牆上的神像塗黑，腳座刻著『以血為供』的經文。"
+      ],
+      "next": "battle_warehouse_sweep"
+    },
+    "battle_warehouse_sweep": {
+      "chapter": "chapter1",
+      "type": "battle",
+      "build": null,
+      "on_win": "post_warehouse",
+      "on_lose": "fail_any"
+    },
+    "post_warehouse": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】倉庫清理完畢，你們在帳冊中找到『血供匯流日程』。",
+        "【弓箭手】下一批獻血在城北聚會點集合，然後運去近郊地牢。",
+        "【勇者】去地牢。"
+      ],
+      "next": "dungeon_approach"
+    },
+    "dungeon_approach": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】近郊的舊地牢幽暗潮溼，石縫間滲出焦味與鐵鏽氣。",
+        "【補師】祭壇氣味很重，裡頭確實有人在煉製黑魔材。",
+        "【弓箭手】前方岔路：左邊是儲藏室，右邊是長廊通往中央廳。"
+      ],
+      "choices": [
+        {
+          "text": "先清理儲藏室（削弱最終戰）",
+          "goto": "storage_room"
+        },
+        {
+          "text": "直闖中央廳",
+          "goto": "pre_boss_cult"
+        }
+      ]
+    },
+    "storage_room": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們砸爛了注血的導管與黑霧濾瓶，符文的光明顯暗淡。",
+        "【勇者】拆掉供給，他們的儀式會亂套。"
+      ],
+      "next": "battle_storage_guards"
+    },
+    "battle_storage_guards": {
+      "chapter": "chapter1",
+      "type": "battle",
+      "build": null,
+      "on_win": "storage_done",
+      "on_lose": "fail_any"
+    },
+    "storage_done": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】守衛潰散，祭材被毀。遠處傳來慌亂的鐘聲。",
+        "【補師】他們發現供給被切斷了，快到中央廳！"
+      ],
+      "next": "pre_boss_cult"
+    },
+    "pre_boss_cult": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】中央廳穹頂掛滿血袋與骨風鈴，地面的符陣近乎完形。",
+        "【邪教儀典官】凡人之血，乃神明甦醒之河。獻上恐懼，封印自裂！",
+        "【弓箭手】這『新興宗教』的神明……其實是魔王！",
+        "【勇者】把你們的供血鏈切個乾淨。"
+      ],
+      "next": "battle_ch1_boss"
+    },
+    "battle_ch1_boss": {
+      "chapter": "chapter1",
+      "type": "battle",
+      "build": null,
+      "on_win": "after_win_ch1",
+      "on_lose": "fail_any"
+    },
+    "after_win_ch1": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】儀典官倒下，符文崩解。被懸掛的血袋自天花板墜落，黑霧如潮倒退。",
+        "【補師】『恐懼匯聚』仍殘存……",
+        "【弓箭手】也就是說，別處還有祭壇在運作。",
+        "【勇者】這只是第一道枷鎖。趁封印尚穩，我們必須拔除所有使徒的召喚點。"
+      ],
+      "choices": [
+        {
+          "text": "前往下一章",
+          "goto": "chapter2_intro"
+        }
+      ]
+    },
+    "fail_any": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】恐懼如洪，沿符陣奔湧；青焰直指封印的裂隙……",
+        "【旁白】王都在尖叫中下沉，深淵張開了眼。"
+      ],
+      "choices": [
+        {
+          "text": "重新挑戰本段戰鬥",
+          "goto": "battle_ch1_boss"
+        }
+      ]
+    },
+    "chapter2_intro": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】北境雪原，風如刃。你們沿著凍河抵達雪國。",
+        "【補師】先了解當地的風俗與人心，才能找到『恐懼匯聚』的去處。",
+        "【弓箭手】城門口貼滿徵信與告示，近月來盜賊猖獗、獻血聚會盛行。"
+      ],
+      "choices": [
+        {
+          "text": "進城打聽民情",
+          "goto": "snow_town_intro"
+        },
+        {
+          "text": "先查獻血教團的動向",
+          "goto": "snow_cult_rumor"
+        }
+      ]
+    },
+    "snow_town_intro": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】酒館內暖氣蒸騰，牆上掛著雪獸皮與冰藍礦石。",
+        "【店老闆】這裡講究『雪祭』：初雪之日向先祖獻白鹽與清水，以求平安。",
+        "【店老闆】但最近有個新興教團，說獻血能『榮耀神明』，還勸大家把血賣給王城的『神官』。",
+        "【勇者】獻血、神官、王城。線索匯合。"
+      ],
+      "choices": [
+        {
+          "text": "出城沿商道追查（易遇戰）",
+          "goto": "snow_road_ambush"
+        },
+        {
+          "text": "去市場聽攤販消息（較安全）",
+          "goto": "snow_market_hearsay"
+        }
+      ]
+    },
+    "snow_market_hearsay": {
+      "type": "dialog",
+      "lines": [
+        "【攤販】這兩週『魔石』用量暴漲！煉爐幾乎不歇，卻不是軍械在增產……",
+        "【攤販】聽說王城裡有人在搞什麼『復生儀』，夜裡耗石如水。",
+        "【弓箭手】魔石消耗異常——很像儀式驅動的能流。"
+      ],
+      "choices": [
+        {
+          "text": "沿商道外圍巡查",
+          "goto": "snow_road_ambush"
+        },
+        {
+          "text": "先接觸地方長老",
+          "goto": "snow_elder"
+        }
+      ]
+    },
+    "snow_cult_rumor": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們在祈禱所外側觀察，香灰裡混著凝血草粉末。",
+        "【補師】這種混合法會降低輸血者的警覺……",
+        "【勇者】有人把民眾當材料。"
+      ],
+      "choices": [
+        {
+          "text": "追查供應線（出城）",
+          "goto": "snow_road_ambush"
+        },
+        {
+          "text": "尋找長老請益",
+          "goto": "snow_elder"
+        }
+      ]
+    },
+    "snow_elder": {
+      "type": "dialog",
+      "lines": [
+        "【雪國長老】我們的祖訓拒絕獻血。『以血祭神』是外來之說。",
+        "【雪國長老】王后薨逝後，國王性情大變；近來王宮深夜常聞鐘鳴，像是在『喚回』什麼……",
+        "【勇者】若王宮內也被牽動，魔王使徒八成涉入。"
+      ],
+      "choices": [
+        {
+          "text": "外圍巡邏，順勢誘出盜賊",
+          "goto": "snow_road_ambush"
+        },
+        {
+          "text": "直接請求覲見（高風險）",
+          "goto": "royal_audience_request"
+        }
+      ]
+    },
+    "snow_road_ambush": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】雪線商道，一支盜賊隊正劫掠護送車隊。",
+        "【弓箭手】護旗是王室標記！",
+        "【勇者】出手！"
+      ],
+      "next": "battle_snow_bandits"
+    },
+    "battle_snow_bandits": {
+      "chapter": "chapter2",
+      "type": "battle",
+      "build": null,
+      "on_win": "rescue_princess",
+      "on_lose": "ch2_fail_any"
+    },
+    "rescue_princess": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們擊潰盜賊，救下被困的少女與侍衛。",
+        "【侍衛長】大恩不言謝——殿下，快謝過恩人！",
+        "【雪國公主】多謝相救。我願引薦你們覲見父王。"
+      ],
+      "choices": [
+        {
+          "text": "隨公主入城覲見",
+          "goto": "royal_audience"
+        },
+        {
+          "text": "先暗查魔石流向再入宮",
+          "goto": "manastone_ledger"
+        }
+      ]
+    },
+    "manastone_ledger": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們從工坊帳冊發現——王宮內的魔石消耗在『冷殿區』暴增，且只在子時啟用。",
+        "【補師】子時、冷殿、魔石——典型復生儀式條件。",
+        "【弓箭手】帶著證據再入宮，話分量會更重。"
+      ],
+      "choices": [
+        {
+          "text": "入宮覲見",
+          "goto": "royal_audience"
+        }
+      ]
+    },
+    "royal_audience_request": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們遞上冒險者工會的保薦函，請求覲見。",
+        "【侍衛】國王日理萬機，請回。",
+        "【勇者】那就從外圍先查證據。"
+      ],
+      "next": "manastone_ledger"
+    },
+    "royal_audience": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】王座高懸，冬陽透過彩窗投下藍金光影。",
+        "【雪國國王】救我愛女之恩，記下了。汝等來意為何？",
+        "【勇者】我們追查魔王使徒。雪國的獻血教團與王宮魔石異常高度相關。",
+        "【雪國國王】無稽之談。退下。",
+        "【補師】……他在迴避。"
+      ],
+      "choices": [
+        {
+          "text": "退下後潛查冷殿",
+          "goto": "cold_hall_sneak"
+        },
+        {
+          "text": "直接要求調查（可能衝突）",
+          "goto": "palace_gate_clash"
+        }
+      ]
+    },
+    "palace_gate_clash": {
+      "type": "dialog",
+      "lines": [
+        "【侍衛長】冒犯王命者，拔劍！",
+        "【勇者】我們無意造次，但真相不得不查。"
+      ],
+      "next": "battle_palace_gate"
+    },
+    "battle_palace_gate": {
+      "chapter": "chapter2",
+      "type": "battle",
+      "build": null,
+      "on_win": "cold_hall_sneak",
+      "on_lose": "ch2_fail_any"
+    },
+    "cold_hall_sneak": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】午夜時分，冷殿內的煉爐吞噬魔石，冰霧中浮現王后的殘影。",
+        "【勇者】他要利用『使徒』作為容器，強行喚回王后……",
+        "【邪教神官】擅闖者死。主的器皿即將降生。"
+      ],
+      "next": "battle_cold_hall_priests"
+    },
+    "battle_cold_hall_priests": {
+      "chapter": "chapter2",
+      "type": "battle",
+      "build": null,
+      "on_win": "king_possession_cutscene",
+      "on_lose": "ch2_fail_any"
+    },
+    "king_possession_cutscene": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】鐘鳴九響，黑環從儀式中竄出，國王踉蹌踏入法陣。",
+        "【雪國國王】若能以吾之軀換她歸來——何惜性命！",
+        "【旁白】半甦醒的使徒附生於王，金藍瞳瞬息化作深淵之黑。"
+      ],
+      "next": "battle_king_possessed"
+    },
+    "battle_king_possessed": {
+      "chapter": "chapter2",
+      "type": "battle",
+      "build": null,
+      "on_win": "after_win_ch2",
+      "on_lose": "ch2_fail_any"
+    },
+    "after_win_ch2": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們斬斷附生，儀式崩解。王倒地氣息微弱，壽命如雪般消散。",
+        "【雪國公主】父王……國事，我會承擔。諸位的真心，我雪國銘記。",
+        "【弓箭手】外頭的雪像是被驚動了。",
+        "【補師】冬之魔獸群受使徒殘餘魔力喚醒，正在集結……",
+        "【勇者】不能讓恐懼蔓延到邊境村鎮。"
+      ],
+      "choices": [
+        {
+          "text": "迎擊覺醒的雪獸（開啟第三章）",
+          "goto": "chapter3_intro"
+        }
+      ]
+    },
+    "ch2_fail_any": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】冰冷鐘聲貫穿長夜，黑環完成最後一枚刻印。",
+        "【旁白】恐懼自雪國擴散，封印上裂痕縱橫。"
+      ],
+      "choices": [
+        {
+          "text": "重試上一戰",
+          "goto": "battle_king_possessed"
+        }
+      ]
+    },
+    "chapter3_intro": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】風雪連日，邊境烽火不絕。你們與雪國軍民一同把守城牆，抵擋魔獸潮整整兩週。",
+        "【弓箭手】不對，數量與週期不符合自然群聚……像是在『製造』。",
+        "【補師】前線殺再多也填不完，我們得查源頭。",
+        "【勇者】突入後方，找出誰在放出這些怪物。"
+      ],
+      "next": "ch3_scout_decide"
+    },
+    "ch3_scout_decide": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】偵察兵回報：雪線後側的裂谷底部出現臨時營地，夜半伴隨血光與咒聲。",
+        "【補師】像『活體改造』的儀式場。",
+        "【勇者】分兵掩護，主力直取裂谷。"
+      ],
+      "choices": [
+        {
+          "text": "派出誘敵小隊（先迎擊一波）",
+          "goto": "battle_ch3_wave1"
+        },
+        {
+          "text": "直接潛入裂谷（較少路上交戰）",
+          "goto": "ch3_cleft_approach"
+        }
+      ]
+    },
+    "battle_ch3_wave1": {
+      "chapter": "chapter3",
+      "type": "battle",
+      "build": null,
+      "on_win": "ch3_after_wave1",
+      "on_lose": "ch3_fail_any"
+    },
+    "ch3_after_wave1": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們短暫擊退魔獸潮，但遠處又浮起低鳴。",
+        "【弓箭手】拖不住太久，得快。"
+      ],
+      "next": "ch3_cleft_approach"
+    },
+    "ch3_cleft_approach": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】裂谷底部搭起粗糙的骨木祭台，黑紅導管把野獸與俘虜連上裝滿濃稠血液的瓷罐。",
+        "【補師】這些導管把『血』與『怨』導入某個器物……",
+        "【勇者】先拆供給，再進核心。"
+      ],
+      "choices": [
+        {
+          "text": "破壞供給與警戒（削弱後續敵人）",
+          "goto": "battle_ch3_mutant_lab"
+        },
+        {
+          "text": "不冒險，直接摸向核心",
+          "goto": "ch3_core_discovery"
+        }
+      ]
+    },
+    "battle_ch3_mutant_lab": {
+      "chapter": "chapter3",
+      "type": "battle",
+      "build": null,
+      "on_win": "ch3_lab_down",
+      "on_lose": "ch3_fail_any"
+    },
+    "ch3_lab_down": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們砸碎導管與血罐，符紋光明顯變暗。",
+        "【弓箭手】至少壓了他們一截火力。",
+        "【勇者】走，進核心。"
+      ],
+      "next": "ch3_core_discovery"
+    },
+    "ch3_core_discovery": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】核心祭壇上，『血衣邪教大祭司』正以殘缺的『魔王右手』為媒，將獸與人改造成魔獸。",
+        "【大祭司】鮮血與怨懟，滋養我之階位。待位格圓滿，主教之位，非我莫屬！",
+        "【補師】那隻手……殘存的魔王權能！難怪魔獸無窮無盡。",
+        "【勇者】先毀右手，斷其根。"
+      ],
+      "choices": [
+        {
+          "text": "尋求大法師援助",
+          "goto": "ch3_seek_archmage"
+        },
+        {
+          "text": "強攻祭壇（風險高）",
+          "goto": "battle_ch3_hasty_attack"
+        }
+      ]
+    },
+    "battle_ch3_hasty_attack": {
+      "chapter": "chapter3",
+      "type": "battle",
+      "build": null,
+      "on_win": "ch3_hasty_fail_cut",
+      "on_lose": "ch3_fail_any"
+    },
+    "ch3_hasty_fail_cut": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們衝進符陣，右手上跳出鎖鏈幻影，將攻勢盡數卸去。",
+        "【補師】以我們的火力破不了這層保護，必須請高階術者援引『對等權能』。",
+        "【勇者】撤開，去找大法師。"
+      ],
+      "next": "ch3_seek_archmage"
+    },
+    "ch3_seek_archmage": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】你們趕往雪國的『蒼瑤塔』，大法師已在塔頂立起對星陣。",
+        "【大法師】殘肢仍繫於魔王本體的權柄，要以半神級權能才能壓制。",
+        "【大法師】我來引法，但你們得在谷地為我爭取時間。"
+      ],
+      "next": "ch3_holdout_brief"
+    },
+    "ch3_holdout_brief": {
+      "type": "dialog",
+      "lines": [
+        "【勇者】全員佈陣，別讓儀式被打斷！",
+        "【旁白】你們在裂谷周邊立下簡易反制紋，準備迎接反撲。"
+      ],
+      "next": "battle_ch3_holdout_1"
+    },
+    "battle_ch3_holdout_1": {
+      "chapter": "chapter3",
+      "type": "battle",
+      "build": null,
+      "on_win": "ch3_holdout_mid",
+      "on_lose": "ch3_fail_any"
+    },
+    "ch3_holdout_mid": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】黑霧更盛，血袋自穹頂落下，成群魔獸翻湧而來。",
+        "【弓箭手】還沒完……再撐一波！"
+      ],
+      "next": "battle_ch3_holdout_2"
+    },
+    "battle_ch3_holdout_2": {
+      "chapter": "chapter3",
+      "type": "battle",
+      "build": null,
+      "on_win": "ch3_archspell_cutscene",
+      "on_lose": "ch3_fail_any"
+    },
+    "ch3_archspell_cutscene": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】蒼穹開裂，恆星軌跡被牽引成巨環。大法師的半神級法術『星渦鎖印』降臨——",
+        "【旁白】鎖印落下，『魔王右手』上竄起的黑鏈頓時破碎。大祭司與其護陣被星光吞沒，灰飛煙滅。",
+        "【勇者】成功了——"
+      ],
+      "next": "ch3_bishop_arrival"
+    },
+    "ch3_bishop_arrival": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】灰燼未散，一道幽黑身影踏出：『血衣邪教主教』。",
+        "【主教】儀式雖毀，供物足矣。右手，我取走了。",
+        "【旁白】主教伸手一勾，殘肢化作赤光落入他掌中，隨即破空遠去。",
+        "【補師】他要回『大炎帝國』的根據地！"
+      ],
+      "choices": [
+        {
+          "text": "返回王城述職",
+          "goto": "ch3_reward_depart"
+        }
+      ]
+    },
+    "ch3_reward_depart": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】雪國上下感念你們守城與斷源之功，賜下厚禮與行軍憑證。",
+        "【雪國公主】請收下雪國之印。願你們追索邪教，平定亂源。",
+        "【勇者】整備補給，目標——大炎帝國。"
+      ],
+      "choices": [
+        {
+          "text": "啟程前往大炎帝國（下一章）",
+          "goto": "chapter4_intro"
+        }
+      ]
+    },
+    "ch3_fail_any": {
+      "type": "dialog",
+      "lines": [
+        "【旁白】儀式被打斷在最後一刻，反噬之潮撲滅了你們的火種。",
+        "【旁白】雪原沉寂，而恐懼在地底蔓延。"
+      ],
+      "choices": [
+        {
+          "text": "重試上一場戰鬥",
+          "goto": "battle_ch3_holdout_2"
+        }
+      ]
+    }
+  }
+}

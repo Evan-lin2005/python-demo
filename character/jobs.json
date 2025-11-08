@@ -1,0 +1,78 @@
+{
+  "Warrior": {
+    "desc": "擅長物理攻擊與正面承傷的鬥士",
+    "stats": { "hp": 1.2, "patk": 1.2, "pdef": 1.1, "matk": 0.8, "mdef": 1.0, "cri": 1.0, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 30, "patk": 3.0, "pdef": 2.2, "matk": 0.8, "mdef": 1.6, "cri": 0.002, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻", "斬擊", "力量提升", "鋼鐵之軀", "堅韌守護","護陣壁壘"]
+  },
+
+  "Assassin": {
+    "desc": "高爆擊高閃避，依靠標記與終結爆發",
+    "stats": { "hp": 0.9, "patk": 1.3, "pdef": 0.9, "matk": 1.0, "mdef": 0.9, "cri": 2.2, "miss": 1.4, "hit": 1.0 },
+    "growth_per_level": { "hp": 20, "patk": 3.5, "pdef": 1.2, "matk": 1.0, "mdef": 1.0, "cri": 0.006, "hit": 0.004, "miss": 0.004, "cridmg": 0.03 },
+    "skills": ["物理普攻", "潛伏", "撕裂標記", "暗殺一閃", "影步連斬"]
+  },
+
+  "Archer": {
+    "desc": "遠程精準輸出與群體壓制",
+    "stats": { "hp": 1.0, "patk": 1.25, "pdef": 0.9, "matk": 0.9, "mdef": 1.0, "cri": 1.6, "miss": 1.1, "hit": 1.2 },
+    "growth_per_level": { "hp": 22, "patk": 3.2, "pdef": 1.6, "matk": 0.8, "mdef": 1.2, "cri": 0.004, "hit": 0.006, "miss": 0.002, "cridmg": 0.02 },
+    "skills": ["物理普攻", "瞄準", "狙擊標記", "箭雨齊發", "致命狙擊", "爆裂散射"]
+  },
+
+  "Cleric": {
+    "desc": "穩定群療與護盾、關鍵時刻給予無敵保護",
+    "stats": { "hp": 1.1, "patk": 0.8, "pdef": 1.0, "matk": 1.1, "mdef": 1.3, "cri": 1.0, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 26, "patk": 1.0, "pdef": 1.8, "matk": 1.8, "mdef": 2.4, "cri": 0.001, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["魔法普攻", "治癒術", "聖光普照", "聖光護壁", "庇護之光", "神聖結界","勇氣讚歌"]
+  },
+
+  "Sorcerer": {
+    "desc": "高爆發的範圍法術與弱化控制",
+    "stats": { "hp": 0.9, "patk": 0.7, "pdef": 0.8, "matk": 1.5, "mdef": 1.1, "cri": 1.0, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 18, "patk": 0.6, "pdef": 1.2, "matk": 4.2, "mdef": 1.8, "cri": 0.002, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["魔法普攻", "火焰風暴", "連鎖閃電", "冰霜衝擊", "衰弱詛咒"]
+  },
+
+  "Elementalist": {
+    "desc": "火冰雷元素輪替，靠標記與爆發收割",
+    "stats": { "hp": 0.95, "patk": 0.8, "pdef": 0.9, "matk": 1.45, "mdef": 1.1, "cri": 1.0, "miss": 1.0, "hit": 1.05 },
+    "growth_per_level": { "hp": 20, "patk": 0.8, "pdef": 1.4, "matk": 3.8, "mdef": 1.6, "cri": 0.002, "hit": 0.004, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["魔法普攻", "火焰風暴", "冰霜衝擊", "雷霆一閃", "連鎖閃電"]
+  },
+
+  "Berserker": {
+    "desc": "以高物攻與自我代價換取極致輸出",
+    "stats": { "hp": 1.15, "patk": 1.5, "pdef": 0.95, "matk": 0.8, "mdef": 0.9, "cri": 1.2, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 28, "patk": 4.0, "pdef": 1.6, "matk": 0.6, "mdef": 1.0, "cri": 0.003, "hit": 0.003, "miss": 0.0, "cridmg": 0.03 },
+    "skills": ["物理普攻", "猛擊", "狂怒", "嗜血", "戰吼","鬼神降世"]
+  },
+
+  "Paladin": {
+    "desc": "前排護衛與輔助增幅的混合坦輔",
+    "stats": { "hp": 1.25, "patk": 1.1, "pdef": 1.2, "matk": 0.9, "mdef": 1.25, "cri": 1.0, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 32, "patk": 2.4, "pdef": 2.6, "matk": 1.0, "mdef": 2.4, "cri": 0.001, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻", "正義裁決", "聖盾隊形", "戰陣號令", "庇護之光"]
+  },
+
+  "Bard": {
+    "desc": "用樂曲強化友軍、干擾敵軍的支援者",
+    "stats": { "hp": 0.95, "patk": 0.9, "pdef": 0.95, "matk": 1.05, "mdef": 1.15, "cri": 1.0, "miss": 1.1, "hit": 1.1 },
+    "growth_per_level": { "hp": 22, "patk": 1.2, "pdef": 1.6, "matk": 2.0, "mdef": 2.2, "cri": 0.002, "hit": 0.005, "miss": 0.002, "cridmg": 0.0 },
+    "skills": ["魔法普攻", "音刃", "激勵曲", "鋒芒詩", "擾亂節拍", "舒緩之歌"]
+  },
+
+  "BloodMage": {
+    "desc": "以生命為燃料的血法師，強勢群體輸出與反傷",
+    "stats": { "hp": 1.0, "patk": 0.8, "pdef": 0.9, "matk": 1.35, "mdef": 1.1, "cri": 1.0, "miss": 1.0, "hit": 1.0 },
+    "growth_per_level": { "hp": 24, "patk": 0.8, "pdef": 1.4, "matk": 3.6, "mdef": 1.6, "cri": 0.002, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["魔法普攻", "血斬", "血之獻祭", "血之荊棘", "血燃"]
+  },
+
+  "Guardian": {
+    "desc": "團隊護衛與嘲諷承傷，偏耐久戰",
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻", "護陣壁壘", "聖盾隊形", "堅韌守護", "戰陣號令"]
+  }
+}
