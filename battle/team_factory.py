@@ -65,6 +65,11 @@ class TeamFactory:
             for e in arr:
                 ch = Character(e["name"], job=e["job"])
                 ch.set_lv(e.get("level", 1))  # 若沒給 level 預設 1
+                
+                # --- ✨ 新增：讀取 feature 字串並附加到角色物件 ---
+                # 預設為 DPS，如果 json 中沒有定義
+                ch.ai_feature_str = e.get("feature", "DPS") 
+                
                 result.append(ch)
             return result
         return []

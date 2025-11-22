@@ -38,7 +38,7 @@ class Character():
         self.skills = []
         self.skip_turn = False
         self.stun = 0
-        self._job_growth = job_data.get("growth", {})
+        self._job_growth = job_data.get("growth_per_level", {})
         for skill_name in job_data["skills"]:
             skill = SkillLibrary.get(skill_name)
             if skill:
@@ -235,12 +235,10 @@ class Character():
         self.level_up(lv - self.lv)
     
     def _growth_inc(self, key, new_lv):
-        g = self._job_growth.get(key)
-        if not g: return 0.0
-        base = float(g.get("base", 0.0))
-        pl   = float(g.get("per_level", 0.0))
-        # 這一次升到 new_lv 
-        raw  = base + pl * max(0, new_lv - 1)
-        # 乘上職業基礎倍率
+        raw = self._job_growth.get(key)
+        if raw is None: 
+            return 0.0
+            
+        # 乘上職業基礎倍率 (self.stats)
         mult = float(self.stats.get(key, 1.0))
-        return raw * mult
+        return float(raw) * mult

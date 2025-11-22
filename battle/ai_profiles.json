@@ -1,0 +1,76 @@
+{
+  "Tank": {
+    "skill_priority": {
+      "ADDSHIELD": 10,
+      "ADDPDEF": 10,
+      "ADDMDEF": 10,
+      "INVINCIBLE": 9,
+      "ADDHP": 8,
+      "THORNS": 7,
+      "ADDCRI": 3,
+      "ADDPATK": 3,
+      "ADDMATK": 3,
+      "PREP_WINDOW": 2,
+      "MARK": 2,
+      "CONSUME_MARK": 1,
+      "DOT": 1,
+      "PHYSICDAMAGE": 2,
+      "MAGICDAMAGE": 2
+    },
+    "target_rule": "LOW_HP"
+  },
+
+  "DPS": {
+    "skill_priority": {
+      "CONSUME_MARK": 10,
+      "PREP_WINDOW": 9,
+      "PHYSICDAMAGE": 8,
+      "MAGICDAMAGE": 8,
+      "MARK": 7,
+      "ADDPATK": 6,
+      "ADDMATK": 6,
+      "ADDCRI": 6,
+      "ADDCRIDMG": 6,
+      "DOT": 5,
+      "LIFESTEAL": 4,
+      "ADDSHIELD": 2,
+      "ADDPDEF": 2,
+      "ADDMDEF": 2,
+      "ADDHP": 1,
+      "INVINCIBLE": 1
+    },
+    "target_rule": "WEAKEST_DEF"
+  },
+
+  "Support": {
+    "skill_priority": {
+      "ADDHP": 10,
+      "ADDSHIELD": 9,
+      "ADDPDEF": 8,
+      "ADDMDEF": 8,
+      "ADDCRI": 7,
+      "ADDCRIDMG": 7,
+      "ADDPATK": 6,
+      "ADDMATK": 6,
+      "PREP_WINDOW": 4,
+      "MARK": 3,
+      "DOT": 2,
+      "PHYSICDAMAGE": 1,
+      "MAGICDAMAGE": 1,
+      "CONSUME_MARK": 1
+    },
+    "target_rule": "LOW_HP"
+  },
+
+  "Default": {
+    "skill_priority": {
+      "PHYSICDAMAGE": 5,
+      "MAGICDAMAGE": 5,
+      "ADDHP": 5,
+      "ADDSHIELD": 5,
+      "ADDPATK": 5,
+      "ADDMATK": 5
+    },
+    "target_rule": "RANDOM"
+  }
+}

@@ -17,7 +17,7 @@ class StoryManager:
         self.curr = None
         self.on_battle_end_next = None
         self._battle_thread = None
-
+        self.teams = []
         # 讓戰鬥與劇情輸出都寫到 UI Log
         set_log_sink(lambda msg: self.ui.call_on_ui(self.ui.append_log, msg))
 
@@ -72,7 +72,7 @@ class StoryManager:
             allies, enemies = self.build_teams(node, node_id)
         except TypeError:
             allies, enemies = self.build_teams(node, node_id)  # 容錯
-
+        self.teams = allies
         self.on_battle_end_next = (on_win, on_lose)
         self._battle_exiting = False
 
@@ -85,22 +85,54 @@ class StoryManager:
         # UI 上重建隊伍
         self.ui.call_on_ui(self.ui.reset_teams, allies, enemies)
 
+        # UI 上重建隊伍
+        self.ui.call_on_ui(self.ui.reset_teams, allies, enemies)
+
         # 分配控制器
         for ch in allies:
             ch.controller = getattr(self.ui, "controller", None) or self.bm.controller
-        enemy_ai = getattr(self, "enemy_ai", None)
-        if enemy_ai is None:
+            
+        # --- ✨ 修改：動態建立 AI 控制器 ---
+        
+        # 1. 導入 AIController 和 Feature Enum
+        # (我們假設 ai_controller.py 在 battle/ 目錄下，且 Feature 在那裡定義)
+        try:
+            from battle.ai_controller import AIController, Feature
+        except ImportError:
+            print("❌ 無法導入 AIController 或 Feature！")
             from battle.ai_controller import AIController
-            enemy_ai = AIController()
-            self.enemy_ai = enemy_ai
+            Feature = None # 設置一個預設值
+
+        # 2. 為本場戰鬥建立一個列表，儲存所有 AI 實例，以便稍後清理
+        self._current_enemy_controllers = []
+
         for ch in enemies:
-            ch.controller = enemy_ai
+            feature_str = getattr(ch, "ai_feature_str", "DPS").upper()
+
+            feature_enum = None
+            if Feature:
+                try:
+                    feature_enum = Feature[feature_str]
+                except KeyError:
+                    print(f"⚠️ 未知的 AI Feature '{feature_str}' (來自 {ch.name})，將使用預設 AI。")
+                    feature_enum = Feature.DPS # 預設為 DPS
+            
+            # 5. 建立一個 *新的* AIController 實例並傳入 feature
+            ai_instance = AIController(feature=feature_enum)
+            ch.controller = ai_instance
+            
+            # 6. 將此實例儲存起來以便清理
+            self._current_enemy_controllers.append(ai_instance)
             
         def _finish(next_id):
             if self._battle_exiting: return
             self._battle_exiting = True
-            # 清掉本場戰鬥訂閱
-            event_manager.unsubscribe_owner(self.enemy_ai)
+            
+            # --- 清理所有 AI 實例的訂閱 ---
+            for ai in getattr(self, "_current_enemy_controllers", []):
+                event_manager.unsubscribe_owner(ai)
+            self._current_enemy_controllers = []
+            
             #丟回 UI 執行緒
             if next_id:
                 self.ui.call_on_ui(self.goto, next_id)
@@ -123,7 +155,7 @@ class StoryManager:
                 self._battle_thread = None
 
 
-        # ✅ 若舊戰鬥 thread 還在，改用輪詢，
+        # 若舊戰鬥 thread 還在，改用輪詢，
         def _poll_and_start():
             if getattr(self, "_battle_thread", None) and self._battle_thread.is_alive():
                 self.ui.call_on_ui(self.ui.append_log, "等待上一場戰鬥釋放資源…")

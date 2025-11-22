@@ -1,25 +1,25 @@
 {
   "chapter1": {
     "battle_smuggler_ambush": [
-      { "name": "走私打手", "job": "Berserker","level" : 1},
-      { "name": "黑市弓手", "job": "Archer","level" : 1 },
-      { "name": "黑巫學徒", "job": "Sorcerer","level" : 1}
+      { "name": "走私打手", "job": "Berserker","level" : 1, "feature": "DPS"},
+      { "name": "黑市弓手", "job": "Archer","level" : 1 , "feature": "DPS"},
+      { "name": "黑巫學徒", "job": "Sorcerer","level" : 1, "feature": "SUPPORT"}
     ],
     "battle_storage_guards": [
-      { "name": "黑市管事", "job": "Elementalist" ,"level" : 2},
-      { "name": "血罐守衛", "job": "BloodMage","level" : 2},
-      { "name": "黑巫學徒", "job": "Sorcerer" ,"level" : 2}
+      { "name": "黑市管事", "job": "Elementalist" ,"level" : 2, "feature": "DPS"},
+      { "name": "血罐守衛", "job": "BloodMage","level" : 2, "feature": "DPS"},
+      { "name": "黑巫學徒", "job": "Sorcerer" ,"level" : 2, "feature": "SUPPORT"}
     ],
     "battle_warehouse_sweep": [
-      { "name": "地牢守衛A", "job": "Paladin" ,"level" : 2},
-      { "name": "地牢守衛B", "job": "Paladin" ,"level" : 2},
-      { "name": "地牢守衛C", "job": "Paladin" ,"level" : 2},
-      { "name": "地牢守衛D", "job": "Paladin" ,"level" : 2}
+      { "name": "地牢守衛A", "job": "Paladin" ,"level" : 2, "feature": "TANK"},
+      { "name": "地牢守衛B", "job": "Paladin" ,"level" : 2, "feature": "TANK"},
+      { "name": "地牢守衛C", "job": "Paladin" ,"level" : 2, "feature": "SUPPORT"},
+      { "name": "地牢守衛D", "job": "Paladin" ,"level" : 2, "feature": "DPS"}
     ],
     "battle_ch1_boss": [
-      { "name": "邪惡黑法師", "job": "Sorcerer","level" :  3},
-      { "name": "暗元素祭司", "job": "Elementalist","level" : 3 },
-      { "name": "血衣教教主", "job": "BloodMage","level" : 5 }
+      { "name": "邪惡黑法師", "job": "Sorcerer","level" :  3, "feature": "DPS"},
+      { "name": "暗元素祭司", "job": "Elementalist","level" : 3, "feature": "DPS"},
+      { "name": "血衣教教主", "job": "BloodMage","level" : 5 , "feature": "DPS"}
     ]
   },
   "chapter2": {
@@ -29,14 +29,14 @@
       { "name": "雪地暴徒", "job": "Warrior" ,"level" : 2}
     ],
     "battle_palace_gate": [
-      { "name": "王城侍衛長", "job": "Paladin" ,"level" : 7},
+      { "name": "王城侍衛長", "job": "Paladin" ,"level" : 5},
       { "name": "王城劍士", "job": "Warrior" ,"level" : 4},
       { "name": "王城弓手", "job": "Archer" ,"level" : 4}
     ],
     "battle_cold_hall_priests": [
       { "name": "邪教神官", "job": "BloodMage" ,"level" : 5},
       { "name": "冷殿祭司", "job": "Elementalist" ,"level" : 5},
-      { "name": "暗影侍從", "job": "Assassin" ,"level" : 6}
+      { "name": "暗影侍從", "job": "Assassin" ,"level" : 5}
     ],
     "battle_king_possessed": [
       { "name": "被附生的國王", "job": "Paladin" ,"level" : 8},
@@ -70,6 +70,104 @@
       { "name": "陰環祭司", "job": "Elementalist", "level": 8 },
       { "name": "暗影刃客", "job": "Assassin", "level": 8 }
     ]
-  }
+  },
+  "chapter4": {
+    "battle_ch4_vanguard": [
+      { "name": "魔族斥候隊長", "job": "Berserker", "level": 9, "feature": "DPS" },
+      { "name": "魔族迅刃兵", "job": "Assassin", "level": 8, "feature": "DPS" },
+      { "name": "魔族黑炎術士", "job": "Sorcerer", "level": 8, "feature": "SUPPORT" }
+    ],
 
+    "battle_ch4_skirmish_1": [
+      { "name": "魔族追擊官", "job": "Warrior", "level": 10, "feature": "TANK" },
+      { "name": "魔族重斧兵", "job": "Berserker", "level": 10, "feature": "DPS" },
+      { "name": "魔族暗影弓手", "job": "Archer", "level": 9, "feature": "DPS" }
+    ],
+
+    "battle_ch4_skirmish_2": [
+      { "name": "黑炎巫教官", "job": "Elementalist", "level": 11, "feature": "SUPPORT" },
+      { "name": "魔族尖牙狂徒", "job": "Berserker", "level": 10, "feature": "DPS" },
+      { "name": "魔族影衛", "job": "Assassin", "level": 10, "feature": "DPS" }
+    ],
+
+    "battle_ch4_giant_wakeup": [
+      {
+        "name": "遠古巨靈（初醒）",
+        "job": "Paladin",
+        "level": 13,
+        "feature": "TANK",
+        "skills": ["Giant_QuakeSmash", "Giant_EarthRoar", "Giant_StoneShell"]
+      },
+      {
+        "name": "魔能激流（左臂）",
+        "job": "Elementalist",
+        "level": 12,
+        "feature": "SUPPORT"
+      },
+      {
+        "name": "魔能震盪（右臂）",
+        "job": "Elementalist",
+        "level": 12,
+        "feature": "SUPPORT"
+      }
+    ]
+  },
+  "chapter5": {
+  "battle_ch5_gate_guard": [
+    { "name": "炎國禁軍盾衛", "job": "Paladin", "level": 12, "feature": "TANK" },
+    { "name": "炎國禁軍刀兵", "job": "Warrior", "level": 11, "feature": "DPS" },
+    { "name": "城門弓兵", "job": "Archer", "level": 11, "feature": "DPS" }
+  ],
+
+  "battle_ch5_temple_outer": [
+    { "name": "聖火騎士", "job": "Paladin", "level": 13, "feature": "TANK" },
+    { "name": "聖火祭司", "job": "BloodMage", "level": 12, "feature": "SUPPORT" },
+    { "name": "狂信衛士", "job": "Berserker", "level": 12, "feature": "DPS" }
+  ],
+
+  "battle_ch5_forge_wardens": [
+    { "name": "熔爐守衛像", "job": "Paladin", "level": 14, "feature": "TANK" },
+    { "name": "熔岩術士", "job": "Elementalist", "level": 13, "feature": "DPS" },
+    { "name": "熔爐血法師", "job": "BloodMage", "level": 13, "feature": "SUPPORT" }
+  ],
+
+  "battle_ch5_bishop_rematch": [
+    { "name": "血衣主教", "job": "BloodMage", "level": 15, "feature": "DPS" },
+    { "name": "火環術士", "job": "Sorcerer", "level": 14, "feature": "DPS" },
+    { "name": "血炎侍衛", "job": "Warrior", "level": 14, "feature": "TANK" }
+  ],
+
+  "battle_ch5_regent_elite": [
+    { "name": "攝政王近衛隊長", "job": "Paladin", "level": 15, "feature": "TANK" },
+    { "name": "攝政王影衛", "job": "Assassin", "level": 15, "feature": "DPS" },
+    { "name": "宮廷黑炎術士", "job": "Sorcerer", "level": 14, "feature": "SUPPORT" }
+  ],
+
+  "battle_ch5_regent_apostle": [
+    {
+      "name": "完全體魔王使徒·攝政王",
+      "job": "Sorcerer",
+      "level": 19,
+      "feature": "DPS",
+      "skills": [
+        "Apostle_SoulBrand",
+        "Apostle_RuinFlare",
+        "Apostle_BloodThrone",
+        "Apostle_FearResonance"
+      ]
+    },
+    {
+      "name": "熔爐聖火護法",
+      "job": "Elementalist",
+      "level": 16,
+      "feature": "SUPPORT"
+    },
+    {
+      "name": "扭曲禁軍殘影",
+      "job": "Warrior",
+      "level": 16,
+      "feature": "TANK"
+    }
+  ]
+}
 }

@@ -50,6 +50,7 @@
       "chapter": "chapter1",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 1000},
       "on_win": "post_ambush",
       "on_lose": "fail_any"
     },
@@ -105,6 +106,7 @@
       "chapter": "chapter1",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 1600},
       "on_win": "post_warehouse",
       "on_lose": "fail_any"
     },
@@ -172,6 +174,7 @@
       "chapter": "chapter1",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 2000},
       "on_win": "after_win_ch1",
       "on_lose": "fail_any"
     },
@@ -307,6 +310,7 @@
       "chapter": "chapter2",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 2400},
       "on_win": "rescue_princess",
       "on_lose": "ch2_fail_any"
     },
@@ -383,6 +387,7 @@
       "chapter": "chapter2",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 2800},
       "on_win": "cold_hall_sneak",
       "on_lose": "ch2_fail_any"
     },
@@ -415,6 +420,7 @@
       "chapter": "chapter2",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 4000},
       "on_win": "after_win_ch2",
       "on_lose": "ch2_fail_any"
     },
@@ -479,6 +485,7 @@
       "chapter": "chapter3",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 3200},
       "on_win": "ch3_after_wave1",
       "on_lose": "ch3_fail_any"
     },
@@ -512,6 +519,7 @@
       "chapter": "chapter3",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 3600},
       "on_win": "ch3_lab_down",
       "on_lose": "ch3_fail_any"
     },
@@ -547,6 +555,7 @@
       "chapter": "chapter3",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 4000},
       "on_win": "ch3_hasty_fail_cut",
       "on_lose": "ch3_fail_any"
     },
@@ -580,6 +589,7 @@
       "chapter": "chapter3",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 4400},
       "on_win": "ch3_holdout_mid",
       "on_lose": "ch3_fail_any"
     },
@@ -595,6 +605,7 @@
       "chapter": "chapter3",
       "type": "battle",
       "build": null,
+      "reward":{"exp" : 4800},
       "on_win": "ch3_archspell_cutscene",
       "on_lose": "ch3_fail_any"
     },
@@ -649,5 +660,475 @@
         }
       ]
     }
+  },
+  "chapter4_intro": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們跨越雪原邊境，沿著北方荒地前往大炎帝國的外圍地帶。",
+      "【弓箭手】這裡……好安靜。",
+      "【補師】不對，太安靜了。",
+      "【勇者】地面在震——是大型部隊的行軍聲！"
+    ],
+    "next": "ch4_discovery"
+  },
+
+  "ch4_discovery": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】冰霧散開，一面沾著黑紅紋章的旗幟從霧中升起。",
+      "【補師】那是……魔族的旗！",
+      "【弓箭手】他們在秘密行軍！？而且兵力……比預期的多太多了！",
+      "【勇者】糟了，被他們發現了——撤入峽谷！"
+    ],
+    "next": "battle_ch4_vanguard"
+  },
+
+  "battle_ch4_vanguard": {
+    "type": "battle",
+    "chapter": "chapter4",
+    "build": null,
+    "reward": { "exp": 3600 },
+    "on_win": "ch4_retreat_1",
+    "on_lose": "ch4_fail_any"
+  },
+
+  "ch4_retreat_1": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們擊倒前鋒，但後方的魔族大軍已全面逼近。",
+      "【弓箭手】不行！後面全是魔族！",
+      "【補師】我們只能邊打邊撤，快往大峽谷跑！"
+    ],
+    "next": "battle_ch4_skirmish_1"
+  },
+
+  "battle_ch4_skirmish_1": {
+    "type": "battle",
+    "chapter": "chapter4",
+    "build": null,
+    "reward": { "exp": 3800 },
+    "on_win": "ch4_retreat_2",
+    "on_lose": "ch4_fail_any"
+  },
+
+  "ch4_retreat_2": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們甩開一批追兵，但魔族數量仍在增加。",
+      "【狂戰士】他們根本是整軍北伐！",
+      "【補師】這條路一旦讓他們通過，北方全境會淪陷！",
+      "【勇者】先進峽谷！那裡地形狹窄，能暫時阻他們！"
+    ],
+    "next": "battle_ch4_skirmish_2"
+  },
+
+  "battle_ch4_skirmish_2": {
+    "type": "battle",
+    "chapter": "chapter4",
+    "build": null,
+    "reward": { "exp": 4000 },
+    "on_win": "ch4_enter_canyon",
+    "on_lose": "ch4_fail_any"
+  },
+
+  "ch4_enter_canyon": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們衝入『天裂大峽谷』，峭壁直落千尺，岩層不穩。",
+      "【補師】這裡……是天然陷阱。",
+      "【弓箭手】等等，那邊有古碑……好像記錄著什麼巨型族群的封印？",
+      "【補師】是遠古巨靈族。他們沉睡於大地之下，一旦喚醒……會先攻擊所有入侵者，包括我們。",
+      "【勇者】但如果能讓巨靈先攻擊魔族——我們就有機會封住峽谷。"
+    ],
+    "choices": [
+      {
+        "text": "尋找可引爆的岩層",
+        "goto": "ch4_find_rocks"
+      },
+      {
+        "text": "研究古碑符文（提示巨靈弱點）",
+        "goto": "ch4_rune_hint"
+      }
+    ]
+  },
+
+  "ch4_rune_hint": {
+    "type": "dialog",
+    "lines": [
+      "【補師】符文顯示，巨靈族對『魔力激流』極度敏感……",
+      "【補師】魔族的大軍本身就是巨大的魔力來源，如果我們引發爆裂，就能利用他們的魔力喚醒巨靈。",
+      "【勇者】也就是說——爆炸 + 魔族靠近 = 巨靈必醒。",
+      "【弓箭手】這會不會太刺激了！？"
+    ],
+    "next": "ch4_find_rocks"
+  },
+
+  "ch4_find_rocks": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們找到半崩落的岩層，只要稍加爆破，就能震動地底。",
+      "【勇者】所有爆雷瓶準備！",
+      "【補師】魔族追兵快到了——這次只能賭！"
+    ],
+    "next": "ch4_trigger_explosion"
+  },
+
+  "ch4_trigger_explosion": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】爆雷瓶被點燃，火光在峽谷內炸裂。地表震蕩，如巨獸甦醒。",
+      "【旁白】魔族的大軍同時湧入峽谷，他們的魔力波動灌入地下。",
+      "【補師】地底的反應……開始了！"
+    ],
+    "next": "battle_ch4_giant_wakeup"
+  },
+
+  "battle_ch4_giant_wakeup": {
+    "type": "battle",
+    "chapter": "chapter4",
+    "build": null,
+    "reward": { "exp": 4500 },
+    "on_win": "ch4_giant_vs_army",
+    "on_lose": "ch4_fail_any"
+  },
+
+  "ch4_giant_vs_army": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】遠古巨靈甦醒，怒火如岩漿般沸騰。巨拳揮出，魔族士兵如紙片般被震飛。",
+      "【弓箭手】天啊……這就是遠古巨靈！？",
+      "【補師】快離開戰場中心！巨靈分不清敵我！",
+      "【勇者】趁他們混戰——準備封死峽谷！"
+    ],
+    "next": "ch4_close_canyon"
+  },
+
+  "ch4_close_canyon": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們點燃最後的爆裂瓶，瞄準峽谷上方的脆弱岩層。",
+      "【勇者】全員撤退！這一炸會把整個峽谷封起來！",
+      "【狂戰士】衝啊——不跑就一起埋了！",
+      "【旁白】震盪擴散，山壁崩塌，上千噸巨石落下，將巨靈與魔族大軍一同埋入地底。"
+    ],
+    "next": "ch4_after_collapse"
+  },
+
+  "ch4_after_collapse": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】大峽谷已被完全封死，魔族北伐通道被徹底阻斷。",
+      "【弓箭手】呼……活下來就是贏了……吧……",
+      "【補師】但魔族大軍只是先鋒，且封印正在加速鬆動……",
+      "【勇者】我們必須在魔王使徒現世前找到下一個線索。"
+    ],
+    "choices": [
+      {
+        "text": "前往大炎帝國內陸追查邪教主教（開啟第五章）",
+        "goto": "chapter5_intro"
+      }
+    ]
+  },
+
+  "ch4_fail_any": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】魔族衝破了防線，大峽谷失守。北境於一夜之內陷入火海。",
+      "【旁白】封印在嘯鳴中裂開。"
+    ],
+    "choices": [
+      {
+        "text": "重試此段戰鬥",
+        "goto": "battle_ch4_vanguard"
+      }
+    ]
+  },
+  "chapter5_intro": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們穿越被戰火與魔獸蹂躪的邊境，遠處赤炎帝都的輪廓在熱霧中浮現。",
+      "【補師】這裡的魔力流動很亂……封印的壓力透過大地傳到這裡來了。",
+      "【弓箭手】城牆上掛滿軍旗和神殿的聖火旗……氣氛一點也不像安穩的國都。",
+      "【勇者】先想辦法入城，找出血衣主教的下落。"
+    ],
+    "choices": [
+      {
+        "text": "隨商隊一同排隊入城（較隱蔽）",
+        "goto": "ch5_gate_merchant"
+      },
+      {
+        "text": "出示雪國印章要求快速通行（較高調）",
+        "goto": "ch5_gate_official"
+      }
+    ]
+  },
+
+  "ch5_gate_merchant": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們混在商隊之中緩步前進，城門口的檢查比想像的更嚴格。",
+      "【弓箭手】每一車貨都翻得像要搬空一樣……帝都最近這麼緊張？",
+      "【商隊頭人】聖火神殿說是『防範邪教與外敵』啦，我們這些小民只能照做。",
+      "【旁白】輪到你們時，一隊禁軍將你們團團圍住。"
+    ],
+    "next": "battle_ch5_gate_guard"
+  },
+
+  "ch5_gate_official": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們亮出雪國的新任君主所賜的印信，城門上的軍官臉色微變。",
+      "【禁軍軍官】雪國？現在正是邊境吃緊之時，外國武裝小隊來帝都作甚？",
+      "【補師】我們追查魔王使徒的殘肢，血衣邪教主教已潛入貴國神殿之中。",
+      "【禁軍軍官】……胡言亂語！來人，把這幾人拿下！",
+      "【旁白】禁軍長刀出鞘，你們被迫在城門外拉開陣勢。"
+    ],
+    "next": "battle_ch5_gate_guard"
+  },
+
+  "battle_ch5_gate_guard": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 5200 },
+    "on_win": "ch5_city_tension",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "ch5_city_tension": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】眼見你們戰力驚人，禁軍不敢再輕舉妄動，只能讓出一道通路。",
+      "【禁軍軍官】……外客，帝都局勢複雜，多一事不如少一事。別惹事便罷。",
+      "【弓箭手】才一進城就被當成麻煩製造機。",
+      "【補師】看樣子，不只是邪教搞事，這個國家的裡裡外外都快要裂開了。",
+      "【旁白】你們很快打聽到：朝中有三股勢力——掌軍權的攝政王、主張節制戰事的三皇子，以及聲勢日隆的聖火神殿。"
+    ],
+    "choices": [
+      {
+        "text": "先接觸傳聞中較開明的三皇子",
+        "goto": "ch5_meet_prince"
+      },
+      {
+        "text": "直接偵查聖火神殿的動向",
+        "goto": "ch5_temple_observe"
+      }
+    ]
+  },
+
+  "ch5_meet_prince": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】在一間看似普通的茶館，你們被引入後室，一位年輕男子已在等候。",
+      "【三皇子】雪國的勇者們……聽說你們斬斷了北境的魔獸源頭，也阻止了一場附生儀式，是嗎？",
+      "【勇者】如果再晚一步，雪國就會變成魔王使徒的祭壇。",
+      "【三皇子】那麼我們恐怕也差不了多少。聖火神殿近來掌握了皇城內外大部分的『治療與祝禱』權限，連父皇的病體也交由他們處理。",
+      "【補師】你懷疑他們在利用皇帝的身體進行儀式？",
+      "【三皇子】我沒有證據，但……我有他們地下熔爐的佈局圖。若要查明真相，只能從那裡下手。"
+    ],
+    "choices": [
+      {
+        "text": "接下地圖，從密道潛入神殿",
+        "goto": "ch5_temple_underground_entry"
+      },
+      {
+        "text": "先在地面觀察神殿動向",
+        "goto": "ch5_temple_observe"
+      }
+    ]
+  },
+
+  "ch5_temple_observe": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】聖火神殿高塔直指天空，白牆金頂，表面看來莊嚴聖潔。",
+      "【弓箭手】可惜門口那些『聖火騎士』的眼神，比我們遇過的邪教徒還要凶。",
+      "【補師】香灰裡混著血祭用的藥粉……這股味道我不會認錯。",
+      "【旁白】就在你們觀察時，一隊披著紅黑祭袍的人被護送進入後殿，那袍子的紋路，與你們在雪國遇見的血衣邪教如出一轍。"
+    ],
+    "choices": [
+      {
+        "text": "強行突破外圍守衛",
+        "goto": "battle_ch5_temple_outer"
+      },
+      {
+        "text": "暫時退開，改走三皇子提供的密道",
+        "goto": "ch5_temple_underground_entry"
+      }
+    ]
+  },
+
+  "battle_ch5_temple_outer": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 5600 },
+    "on_win": "ch5_temple_inner",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "ch5_temple_underground_entry": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】依照三皇子提供的圖，你們從一口被封死的古井旁找到暗門，悄然潛入聖火神殿下方。",
+      "【弓箭手】這裡的牆……不像神殿的風格，更像是被改造過的舊遺跡。",
+      "【補師】符文的結構也是邪教慣用的引流法陣模式。",
+      "【勇者】不管從地面打進來還是從密道摸進來，終點都是地下熔爐。"
+    ],
+    "next": "ch5_temple_inner"
+  },
+
+  "ch5_temple_inner": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們在地底與地面兩路會合，前方便是聖火神殿的地下熔爐區入口。",
+      "【旁白】厚重的鐵門後傳來低沉的咒聲與熔岩翻湧的聲音。",
+      "【補師】這裡不是給普通祭司用的地方……是高階儀式場。",
+      "【勇者】準備好，接下來每一步都不會輕鬆。"
+    ],
+    "next": "battle_ch5_forge_wardens"
+  },
+
+  "battle_ch5_forge_wardens": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 6000 },
+    "on_win": "ch5_bishop_confront",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "ch5_bishop_confront": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】穿過層層符陣與熔岩管道，你們來到地下熔爐的核心前庭。",
+      "【旁白】血衣主教站在半月形祭壇前，身後是刻滿聖火紋樣與邪教符文的巨大石壁。",
+      "【血衣主教】呵……雪國、雪原，現在是大炎帝國。你們真是執著的『封印看門狗』。",
+      "【補師】那紋路……是你在引導封印的裂痕朝這裡匯聚！",
+      "【血衣主教】別誤會，我不過是受『殿下』之託，略施薄技罷了。這副帝國的軀殼，本就是絕佳的祭品。",
+      "【勇者】殿下？你在替誰工作？",
+      "【血衣主教】等你們死在這裡，自然就知道了。"
+    ],
+    "next": "battle_ch5_bishop_rematch"
+  },
+
+  "battle_ch5_bishop_rematch": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 6400 },
+    "on_win": "ch5_regent_reveal",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "ch5_regent_reveal": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】血衣主教跪倒在地，口中仍念著殘缺的咒文。地面響起沉穩的腳步聲。",
+      "【旁白】一名披著華袍與戰甲的男子走入熔爐核心，眼神冷如刀鋒——是大炎帝國的攝政王。",
+      "【攝政王】堂堂雪國英雄，竟淪為阻撓人類自救的絆腳石，真是可惜。",
+      "【弓箭手】等等，你才是……？！",
+      "【補師】兩位皇子之死……不是意外，是你動的手腳？",
+      "【攝政王】帝國需要一個能做決斷的君主，而不是被病體與恐懼拖垮的傀儡。兩個優柔寡斷的孩子，與那位遲早要倒下的君王，都只是舊時代的殘渣。",
+      "【攝政王】第三個也一樣——此刻禁軍與駐軍已在宮城交戰，我的精銳正趁亂取他性命。到了明日，天下自會承認——除了我，沒有第二個能守護人族的皇。",
+      "【勇者】你用整個帝國當祭品，就叫守護？",
+      "【攝政王】當魔王復甦已是必然，唯一的出路，就是搶在牠之前，奪取那份權能。"
+    ],
+    "choices": [
+      {
+        "text": "喝斥攝政王，試圖阻止儀式",
+        "goto": "ch5_regent_reveal_step2"
+      }
+    ]
+  },
+
+  "ch5_regent_reveal_step2": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】攝政王抬手，熔爐上方的鎖鏈猛然繃緊，你們看到皇帝被倒吊在熔岩上空，身上刻滿血色符文。",
+      "【攝政王】父皇的血統，與帝國的神器，一同構成完美的容器。只要再添上一點『魔王使徒』的碎片——",
+      "【旁白】血衣主教虛弱地抬起手，將被黑炎纏繞的殘肢拋向皇帝胸口。符文同時亮起，熔岩沸騰。",
+      "【補師】你打算犧牲皇帝，自己來支配甦醒的使徒……！",
+      "【攝政王】正確。只要我握住那股權能，人類便不再需要恐懼魔族與邪教。",
+      "【勇者】你不是要守護人類，你只是想讓世界跪在你腳下。",
+      "【攝政王】歷史只會記得結果。來吧，讓我先清掉你們這些不懂大局的阻礙。"
+    ],
+    "next": "battle_ch5_regent_elite"
+  },
+
+  "battle_ch5_regent_elite": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 7000 },
+    "on_win": "ch5_apostle_fusion",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "ch5_apostle_fusion": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們擊潰攝政王的親衛，卻被熔爐中央暴走的魔力逼退。",
+      "【旁白】皇帝發出一聲淒厲的吼叫，身上的血紋如活物般爬向攝政王；殘肢裂開，無數黑鏈穿透兩人的軀體。",
+      "【補師】不好！儀式的核心換成了攝政王本人！",
+      "【攝政王】啊——這就是……魔王使徒的權能……！比一切王座都還要高……！",
+      "【旁白】熔爐上空浮現一個扭曲的人影，與攝政王的身形重疊、融合，那股存在感遠比雪國見過的殘影更為完整。",
+      "【弓箭手】他被……使徒吞噬了……！",
+      "【旁白】當魔力風暴稍稍平息，一個披著破碎王袍與黑焰鎧甲的身影踏出——第一個完全復活的使徒，以攝政王為殼。"
+    ],
+    "next": "battle_ch5_regent_apostle"
+  },
+
+  "battle_ch5_regent_apostle": {
+    "type": "battle",
+    "chapter": "chapter5",
+    "build": null,
+    "reward": { "exp": 9000 },
+    "on_win": "after_win_ch5",
+    "on_lose": "ch5_fail_any"
+  },
+
+  "after_win_ch5": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】你們傾盡全力，將完全體使徒逼入角落，它的黑焰鎧甲出現龜裂，魔力洶湧不穩。",
+      "【完全體使徒·攝政王】區區凡人……竟能將我逼至此地步……",
+      "【旁白】就在此時，熔爐深處傳來另一股古老而熟悉的力量——一柄封於帝都數百年的神器自岩壁中浮起，其上刻滿開國戰爭的刻痕。",
+      "【旁白】神器上亮起朦朧人影，聲線蒼老卻堅定——開國皇帝的殘影甦醒了。",
+      "【開國皇帝殘影】帝國之名，不容魔王踐踏！",
+      "【旁白】神器化作一道純白光束，直擊完全體使徒的胸膛。黑焰鎧甲碎裂，尖叫聲撕裂整個熔爐空間。",
+      "【完全體使徒·攝政王】可惡……這副容器……撐不住了……！",
+      "【旁白】它勉強撕開一道漆黑的裂縫，以殘破之軀逃向遠方——古紅海的火山深淵。",
+      "【旁白】熔爐崩塌，皇帝的軀體從鎖鏈上墜落，氣息微弱。三皇子帶著滿身血污闖入，護衛身上盡是禁軍與刺客的血跡。",
+      "【三皇子】父皇——！攝政王……他也……",
+      "【補師】兩位皇兄早已死在他布局之中，你是唯一活下來的繼承人。",
+      "【皇帝】咳……咳……聽好了……真正的封印……在更南方……古紅海的火山深淵……第三位使徒……將在那里迎接……牠的同胞……",
+      "【旁白】說完最後一句，皇帝便斷了氣。開國皇帝的殘影也在神器上對你們微微頷首，隨即化光而散。",
+      "【三皇子】帝國的罪與債，由我承擔。諸位的真心與流血，我大炎帝國銘記在心。",
+      "【弓箭手】封印的裂痕已經蔓延到這裡，再拖……整個大陸都撐不住了。",
+      "【補師】古紅海、火山深淵、第三位使徒……我們的時間不多了。",
+      "【勇者】整備補給，目標——南方古紅海。要在魔王親臨之前，先把所有階梯都打斷。"
+    ],
+    "choices": [
+      {
+        "text": "啟程前往古紅海（開啟第六章）",
+        "goto": "chapter6_intro"
+      }
+    ]
+  },
+
+  "ch5_fail_any": {
+    "type": "dialog",
+    "lines": [
+      "【旁白】熔爐的黑炎衝破穹頂，帝都在一夜之間被恐懼與火光吞噬。",
+      "【旁白】完全體的魔王使徒以攝政王的軀殼為殼，壓制了神器與開國皇的殘影，封印上的裂痕縱橫交錯。",
+      "【旁白】在無數哀號聲中，大陸朝深淵再沉一分。"
+    ],
+    "choices": [
+      {
+        "text": "重新挑戰完全體使徒之戰",
+        "goto": "battle_ch5_regent_apostle"
+      }
+    ]
   }
 }

@@ -70,7 +70,7 @@ class SaveManager:
             ch.exp = exp
 
             # 以存檔為準覆寫屬性
-            ch.max_hp  = d.get("max_hp", ch.max_hp); ch.hp   = d.get("hp",   ch.max_hp)
+            ch.max_hp  = d.get("max_hp", ch.max_hp); ch.hp   = ch.max_hp #儲存為最大生命值
             ch.max_patk= d.get("patk",  ch.max_patk); ch.patk= ch.max_patk
             ch.max_pdef= d.get("pdef",  ch.max_pdef); ch.pdef= ch.max_pdef
             ch.max_matk= d.get("matk",  ch.max_matk); ch.matk= ch.max_matk

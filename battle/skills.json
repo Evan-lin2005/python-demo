@@ -795,6 +795,163 @@
       { "target": "SELF", "phase": "APPLY", "name": "血祭破綻(物防)", "desc": "物防 -100%", "duration": 2, "effect": "ADDPDEF", "percent": -1.0, "base": 0 },
       { "target": "SELF", "phase": "APPLY", "name": "血祭破綻(魔防)", "desc": "魔防 -100%", "duration": 2, "effect": "ADDMDEF", "percent": -1.0, "base": 0 }
     ]
-  }
+  },
+    "Giant_QuakeSmash": {
+    "desc": "巨靈以巨拳砸地，引發震波造成 180% 物理傷害並暈眩 1 回合",
+    "cd": 3,
+    "cost": 0,
+    "buffs": [
+      { "target": "ENEMY", "phase": "APPLY", "name": "地裂重擊", "desc": "物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.8, "base": 15 },
+      { "target": "ENEMY", "phase": "APPLY", "name": "震暈", "desc": "暈眩效果", "duration": 1, "effect": "STUN", "percent": 0.0, "base": 0 }
+    ]
+  },
+
+  "Giant_EarthRoar": {
+    "desc": "巨靈怒吼震裂空氣，對全體敵人造成 70% 物魔混合傷害，並使其命中 -20%",
+    "cd": 4,
+    "cost": 0,
+    "buffs": [
+      { "target": "ENEMIES", "phase": "APPLY", "name": "大地震盪(物)", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.7, "base": 0 },
+      { "target": "ENEMIES", "phase": "APPLY", "name": "大地震盪(魔)", "desc": "群體魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.7, "base": 0 },
+      { "target": "ENEMIES", "phase": "APPLY", "name": "震盪餘波", "desc": "命中下降", "duration": 1, "effect": "ADDHIT", "percent": 0.0, "base": -0.20 }
+    ]
+  },
+
+  "Giant_StoneShell": {
+    "desc": "巨靈將岩層凝聚在身上，獲得護盾 = 30% 最大 HP 並提升雙防 20%，持續 2 回合",
+    "cd": 5,
+    "cost": 0,
+    "buffs": [
+      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(盾)", "desc": "護盾", "duration": 2, "effect": "ADDSHIELD", "percent": 0.30, "base": 0 },
+      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(物防)", "desc": "物防提升", "duration": 2, "effect": "ADDPDEF", "percent": 0.20, "base": 0 },
+      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(魔防)", "desc": "魔防提升", "duration": 2, "effect": "ADDMDEF", "percent": 0.20, "base": 0 }
+    ]
+  },
+  "Apostle_SoulBrand": {
+    "desc": "以恐懼烙印靈魂，對全體敵人施加恐懼印記與輕傷。",
+    "cd": 3,
+    "cost": 0,
+    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.8 },
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "恐懼烙印",
+        "desc": "標記靈魂，為後續技能增傷",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "恐懼餘波",
+        "desc": "輕微魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.4,
+        "base": 5
+      }
+    ]
+  },
+
+  "Apostle_RuinFlare": {
+    "desc": "引爆所有恐懼烙印，依印記層數大幅提升傷害的滅世焰光。",
+    "cd": 5,
+    "cost": 0,
+    "growth": { "type": "burst", "base_rate": 0.12, "factor": 0.8, "max_percent": 2.2 },
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "毀滅焰光(消耗)",
+        "mark_key": "恐懼烙印",
+        "desc": "消耗恐懼烙印以強化傷害",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "percent": 0.3,
+        "base": 20
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "毀滅焰光",
+        "desc": "高額群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.4,
+        "base": 20
+      }
+    ]
+  },
+
+  "Apostle_BloodThrone": {
+    "desc": "從單體敵人身上抽取生命燃為王座之血，造成高額魔傷並大量自癒。",
+    "cd": 4,
+    "cost": 0,
+    "growth": { "type": "linear", "base_rate": 0.1, "max_percent": 2.0 },
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "血之王座斬擊",
+        "desc": "單體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.6,
+        "base": 25
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血座回湧",
+        "desc": "吸收敵人痛苦回復自身生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": 0.25,
+        "base": 40
+      }
+    ]
+  },
+
+  "Apostle_FearResonance": {
+    "desc": "讓戰場上的恐懼產生共鳴，使敵方全體持續失血並動搖心志。",
+    "cd": 4,
+    "cost": 0,
+    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.6 },
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "END",
+        "name": "恐懼共鳴",
+        "desc": "每回合失去生命",
+        "duration": 3,
+        "effect": "DOT",
+        "percent": 0.0,
+        "base": 35
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "心志崩塌(命中)",
+        "desc": "命中下降",
+        "duration": 2,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": -0.15
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "心志崩塌(防禦)",
+        "desc": "物防與魔防略降（以後可拆成兩招）",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": -0.10,
+        "base": 0
+      }
+    ]
+}
 
 }

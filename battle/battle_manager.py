@@ -4,6 +4,7 @@ from battle.ai_controller import AIController
 from battle.battle_log import BattleLog
 import copy
 
+
 class CLIController:
     def select_skill(self, actor):
         while True:
@@ -77,8 +78,8 @@ class BattleManager:
             return
             
         # === 1) 選技能 ===
-        if isinstance(controller, AIController):
-            skill = controller.choose_skill(actor=src)        # ★ 把 src 傳進去
+        if isinstance(controller, AIController):# AI 選技能
+            skill = controller.choose_skill(actor=src,allies=allies,enemies=enemies)  #皆傳入
             if not skill:
                 print(f"{src.name} 沒有技能可用，跳過回合。")
                 # 結束回合
