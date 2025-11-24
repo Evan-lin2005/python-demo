@@ -215,6 +215,10 @@ class CharPanel(ttk.Frame):
         self.lbl_hp = ttk.Label(self, textvariable=self.hp_var)
         self.lbl_hp.grid(row=2, column=1, sticky="w")
 
+        # ★ Buff 區塊：放在血量下方一排
+        self.frm_buffs = tk.Frame(self, bg="#1a1a1a")
+        self.frm_buffs.grid(row=3, column=1, sticky="w", pady=2)
+        
         self.columnconfigure(1, weight=1)
         self.refresh()
 
@@ -346,6 +350,8 @@ class BattleUI(tk.Tk):
         # 立即刷新一次
         self.refresh_panels()
         # ui/gui.py -> class BattleUI(...):
+        self._buff_labels = {}   # ch -> list of labels
+
 
     def update_health_bar(self, ch):
        
@@ -385,9 +391,67 @@ class BattleUI(tk.Tk):
             panel.update_shield_from_char()
 
     def update_status_panel(self, ch):
+        # 找是哪個 panel
+        panel = self._find_panel_for(ch)
+        if not panel:
+            return
 
-        pass
-        
+        frm = panel.frm_buffs
+
+        # 清掉舊 buff 標籤
+        for w in frm.winfo_children():
+            w.destroy()
+
+        # 若沒 buff → 顯示空
+        if not getattr(ch, "buffs", None):
+            return
+
+        # 依序顯示每個 Buff
+        for b in ch.buffs:
+
+            # 顯示在 Label 上的短字
+            txt = f"{b.name}({b.duration}T)"
+
+            # 顏色分類
+            color = self._buff_color(b)
+
+            lbl = tk.Label(
+                frm,
+                text=txt,
+                fg=color,
+                bg="#1a1a1a",
+                font=("微軟正黑體", 9),
+                padx=4
+            )
+            lbl.pack(side="left", padx=3)
+
+            # Tooltip 顯示更完整資訊
+            detail = (
+                f"名稱：{b.name}\n"
+                f"描述：{b.desc}\n"
+                f"效果：{b.effect.name}\n"
+                f"剩餘回合：{b.duration}"
+            )
+            ToolTip(lbl, detail)
+
+        # 更新紀錄
+        self._buff_labels[ch] = frm.winfo_children()
+
+    def _buff_color(self, buff):
+        name = buff.effect.name
+
+        if name in ("ADDPATK", "ADDMATK", "ADDPDEF", "ADDMDEF",
+                    "ADDSHIELD", "ADDCRI", "ADDHIT"):
+            return "#4ec9b0"   # 增益：綠色
+
+        if name in ("DOT", "MARK", "STUN", "CONSUME_MARK", "ADDMISS"):
+            return "#d16969"   # 減益 / 控制：紅色
+
+        if name in ("INVINCIBLE", "TAUNT"):
+            return "#c586c0"   # 特殊：紫色
+
+        return "white"
+
     def call_on_ui(self, fn, *args, **kwargs):
         # 把 UI 操作排回 Tk 主執行緒
         try:

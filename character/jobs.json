@@ -74,5 +74,77 @@
     "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
     "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
     "skills": ["物理普攻", "護陣壁壘", "聖盾隊形", "堅韌守護", "戰陣號令"]
+  },
+
+  "DemonPrince": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DEV_BlackRage", "A5_DarkStep"]
+  },
+  "AbyssLord": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DEV_DarkFlameCurse", "DUK_ColdAbyss"]
+  },
+  "BlackflameDuke": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DUK_AbyssBurn"]
+  },
+    "FrostDuke": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DUK_ColdAbyss"]
+  },
+  "ShadowDuke": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DUK_PhantomRend"]
+  },
+  "BloodDuke": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DUK_Overburn"]
+  },
+  "AbyssCommander": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DEV_DarkFlameCurse", "MK_SpiritCollapse"]
+  },
+  "MagmaFiend": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DEV_BlackRage"]
+  },
+  "Archfiend": {
+    "stats": { "hp": 1.3, "patk": 1.0, "pdef": 1.35, "matk": 0.8, "mdef": 1.2, "cri": 0.9, "miss": 0.9, "hit": 1.0 },
+    "growth_per_level": { "hp": 36, "patk": 1.6, "pdef": 3.0, "matk": 0.6, "mdef": 2.6, "cri": 0.0, "hit": 0.003, "miss": 0.0, "cridmg": 0.0 },
+    "skills": ["物理普攻",
+      "魔法普攻","DEV_DarkFlameCurse"]
+  },
+  "FinalDemonKing": {
+    "stats": { "hp": 5, "patk": 5, "pdef": 5, "matk": 5, "mdef": 5, "cri": 5, "miss": 0, "hit": 10 },
+    "growth_per_level": { "hp": 90, "patk": 8, "pdef": 7, "matk": 5, "mdef": 6, "cri": 0.001, "hit": 0.003, "miss": 0.00002, "cridmg": 0.006 },
+    "skills": [
+      "物理普攻",
+      "魔法普攻",
+      "MK_AbyssNova",
+      "MK_RuinClaw",
+      "MK_SpiritCollapse",
+      "MK_ShadowDominion",
+      "MK_FiveForbidden",
+      "MK_AbsoluteErase",
+      "MK_DeepGodRoar",
+      "MK_HellDrain"
+    ]
   }
+
 }

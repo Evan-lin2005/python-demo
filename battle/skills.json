@@ -3,145 +3,390 @@
     "desc": "對單體造成基礎物理傷害",
     "cd": 0,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 1.5 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 1.5
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "物理普攻", "desc": "基礎物理攻擊", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.0, "base": 0 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "物理普攻",
+        "desc": "基礎物理攻擊",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.0,
+        "base": 0
+      }
     ]
   },
-
   "魔法普攻": {
     "desc": "對單體造成基礎魔法傷害",
     "cd": 0,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 1.5 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 1.5
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "魔法普攻", "desc": "基礎魔法攻擊", "duration": 0, "effect": "MAGICDAMAGE", "percent": 1.0, "base": 0 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "魔法普攻",
+        "desc": "基礎魔法攻擊",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.0,
+        "base": 0
+      }
     ]
   },
-
   "斬擊": {
     "desc": "對單體造成 120% 物理傷害",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.10, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 1.8
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "斬擊", "desc": "造成傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.2, "base": 5 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "斬擊",
+        "desc": "造成傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.2,
+        "base": 5
+      }
     ]
   },
-
   "力量提升": {
     "desc": "提升自身物攻 20%，持續 2 回合",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "力量提升", "desc": "物攻提升", "duration": 2, "effect": "ADDPATK", "percent": 0.2, "base": 5 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "力量提升",
+        "desc": "物攻提升",
+        "duration": 2,
+        "effect": "ADDPATK",
+        "percent": 0.2,
+        "base": 5
+      }
     ]
   },
-
   "鋼鐵之軀": {
     "desc": "獲得護盾 = 20% 最大 HP，持續 2 回合",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "鋼鐵之軀", "desc": "護盾效果", "duration": 2, "effect": "ADDSHIELD", "percent": 0.2, "base": 0 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "鋼鐵之軀",
+        "desc": "護盾效果",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.2,
+        "base": 0
+      }
     ]
   },
-
   "堅韌守護": {
     "desc": "提升自身雙防 30%，持續 3 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "堅韌守護(物)", "desc": "物防提升", "duration": 3, "effect": "ADDPDEF", "percent": 0.3, "base": 3 },
-      { "target": "SELF", "phase": "APPLY", "name": "堅韌守護(魔)", "desc": "魔防提升", "duration": 3, "effect": "ADDMDEF", "percent": 0.3, "base": 3 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "堅韌守護(物)",
+        "desc": "物防提升",
+        "duration": 3,
+        "effect": "ADDPDEF",
+        "percent": 0.3,
+        "base": 3
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "堅韌守護(魔)",
+        "desc": "魔防提升",
+        "duration": 3,
+        "effect": "ADDMDEF",
+        "percent": 0.3,
+        "base": 3
+      }
     ]
   },
-
   "潛伏": {
     "desc": "進入潛伏狀態，下次攻擊傷害 +40%，命中 +20%，持續 1 回合",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "潛伏", "desc": "準備窗：增傷", "duration": 1, "effect": "PREP_WINDOW", "percent": 0.4, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "潛伏命中", "desc": "命中提升", "duration": 1, "effect": "ADDHIT", "percent": 0.0, "base": 0.2 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "潛伏",
+        "desc": "準備窗：增傷",
+        "duration": 1,
+        "effect": "PREP_WINDOW",
+        "percent": 0.4,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "潛伏命中",
+        "desc": "命中提升",
+        "duration": 1,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": 0.2
+      }
     ]
   },
-
   "撕裂標記": {
     "desc": "對單體造成 80% 物理傷害，並施加 3 層脆弱印記",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.1, "max_percent": 1.6 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 1.6
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "撕裂", "desc": "造成物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.8, "base": 0 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "脆弱印記", "desc": "印記效果", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "脆弱印記", "desc": "印記效果", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "脆弱印記", "desc": "印記效果", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "撕裂",
+        "desc": "造成物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 0.8,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "脆弱印記",
+        "desc": "印記效果",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "脆弱印記",
+        "desc": "印記效果",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "脆弱印記",
+        "desc": "印記效果",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      }
     ]
   },
-
   "暗殺一閃": {
     "desc": "終結技：消耗印記，每層 +50% 傷害乘數 +20 固定，加上 200% 物理基礎傷害",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.15, "factor": 0.8, "max_percent": 2.5 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.15,
+      "factor": 0.8,
+      "max_percent": 2.5
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "暗殺一閃(消耗)", "mark_key" : "脆弱印記","desc": "消耗脆弱印記", "duration": 0, "effect": "CONSUME_MARK", "percent": 0.5, "base": 20 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "暗殺一閃", "desc": "高額基礎傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 2.0, "base": 10 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "暗殺一閃(消耗)",
+        "mark_key": "脆弱印記",
+        "desc": "消耗脆弱印記",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "percent": 0.5,
+        "base": 20
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "暗殺一閃",
+        "desc": "高額基礎傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 2.0,
+        "base": 10
+      }
     ]
   },
-
   "瞄準": {
     "desc": "瞄準 1 回合，下次攻擊 +50% 傷害、命中 +30%",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "瞄準", "desc": "準備窗", "duration": 1, "effect": "PREP_WINDOW", "percent": 0.5, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "瞄準命中", "desc": "命中提升", "duration": 1, "effect": "ADDHIT", "percent": 0.0, "base": 0.3 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "瞄準",
+        "desc": "準備窗",
+        "duration": 1,
+        "effect": "PREP_WINDOW",
+        "percent": 0.5,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "瞄準命中",
+        "desc": "命中提升",
+        "duration": 1,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": 0.3
+      }
     ]
   },
-
   "狙擊標記": {
     "desc": "對敵方全體施加 3 層狙擊標記，持續 3 回合",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 1.5 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 1.5
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "狙擊標記", "desc": "標記層數", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "狙擊標記", "desc": "標記層數", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "狙擊標記", "desc": "標記層數", "duration": 3, "effect": "MARK", "percent": 0.0, "base": 0 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "狙擊標記",
+        "desc": "標記層數",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "狙擊標記",
+        "desc": "標記層數",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "狙擊標記",
+        "desc": "標記層數",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      }
     ]
   },
-
   "毒霧": {
     "desc": "敵方全體中毒，每回合 -20 HP，持續 3 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 1.0 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 1.0
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "END", "name": "毒霧", "desc": "每回合失血", "duration": 3, "effect": "DOT", "percent": 0.0, "base": 20 }
+      {
+        "target": "ENEMIES",
+        "phase": "END",
+        "name": "毒霧",
+        "desc": "每回合失血",
+        "duration": 3,
+        "effect": "DOT",
+        "percent": 0.0,
+        "base": 20
+      }
     ]
   },
-
   "火焰風暴": {
     "desc": "對敵方全體造成 (40 + 80% 魔攻) 魔法傷害",
     "cd": 5,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.15, "factor": 0.8, "max_percent": 1.5 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.15,
+      "factor": 0.8,
+      "max_percent": 1.5
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "火焰風暴", "desc": "群體魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.8, "base": 40 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "火焰風暴",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.8,
+        "base": 40
+      }
     ]
   },
   "冰霜衝擊": {
     "desc": "對自己附加 (30% + 5點魔攻) 一回合強化，然後對敵方全體造成 80% + 10 點魔法傷害，並降低其命中與閃避 20%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.8
+    },
     "buffs": [
       {
         "target": "SELF",
@@ -186,70 +431,90 @@
     ]
   },
   "雷霆一閃": {
-      "desc": "先標記敵人，再消耗所有標記造成 (標記數×20) + 150% 魔法傷害",
-      "cd": 4,
-      "cost": 0,
-      "growth": { "type": "burst", "base_rate": 0.12, "factor": 0.8, "max_percent": 2.0 },
-      "buffs": [
-        {
-          "target": "ENEMY",
-          "phase": "APPLY",
-          "name": "雷霆印記",
-          "desc": "雷霆標記層數",
-          "duration": 3,
-          "effect": "MARK",
-          "percent": 0.0,
-          "base": 0
-        },
-        {
-          "target": "ENEMY",
-          "phase": "APPLY",
-          "name": "雷霆印記",
-          "desc": "雷霆標記層數",
-          "duration": 3,
-          "effect": "MARK",
-          "percent": 0.0,
-          "base": 0
-        },
-        {
-          "target": "ENEMY",
-          "phase": "APPLY",
-          "name": "雷霆印記(消耗)",
-          "mark_key" : "雷霆印記",
-          "desc": "消耗標記並增幅傷害",
-          "duration": 0,
-          "effect": "CONSUME_MARK",
-          "percent": 0.0,
-          "base": 0
-        },
-        {
-          "target": "ENEMY",
-          "phase": "APPLY",
-          "name": "雷霆一閃",
-          "desc": "高額魔法傷害",
-          "duration": 0,
-          "effect": "MAGICDAMAGE",
-          "percent": 1.5,
-          "base": 0
-        }
-      ]
-    }
-
-  ,
+    "desc": "先標記敵人，再消耗所有標記造成 (標記數×20) + 150% 魔法傷害",
+    "cd": 4,
+    "cost": 0,
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.12,
+      "factor": 0.8,
+      "max_percent": 2.0
+    },
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "雷霆印記",
+        "desc": "雷霆標記層數",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "雷霆印記",
+        "desc": "雷霆標記層數",
+        "duration": 3,
+        "effect": "MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "雷霆印記(消耗)",
+        "mark_key": "雷霆印記",
+        "desc": "消耗標記並增幅傷害",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "雷霆一閃",
+        "desc": "高額魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.5,
+        "base": 0
+      }
+    ]
+  },
   "魔力增幅": {
     "desc": "我方全體魔攻 +20%，持續 3 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "魔力增幅", "desc": "提升魔攻", "duration": 3, "effect": "ADDMATK", "percent": 0.2, "base": 0 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "魔力增幅",
+        "desc": "提升魔攻",
+        "duration": 3,
+        "effect": "ADDMATK",
+        "percent": 0.2,
+        "base": 0
+      }
     ]
   },
   "治癒術": {
     "desc": "恢復一名我方 60% 最大生命 +15 點生命值",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "ALLY",
@@ -263,12 +528,15 @@
       }
     ]
   },
-
   "聖光普照": {
     "desc": "全體回復 15% 最大生命並獲得 10%生命 護盾，雙防 +2，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "TEAM",
@@ -312,21 +580,37 @@
       }
     ]
   },
-
   "勇氣讚歌": {
     "desc": "全體物攻 +20%，持續 3 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "勇氣讚歌", "desc": "提升物攻", "duration": 3, "effect": "ADDPATK", "percent": 0.2, "base": 5 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "勇氣讚歌",
+        "desc": "提升物攻",
+        "duration": 3,
+        "effect": "ADDPATK",
+        "percent": 0.2,
+        "base": 5
+      }
     ]
   },
   "血斬": {
     "desc": "造成 150% 魔法傷害",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.10, "max_percent": 2.0 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 2.0
+    },
     "buffs": [
       {
         "target": "ENEMY",
@@ -340,12 +624,15 @@
       }
     ]
   },
-
   "血之獻祭": {
     "desc": "消耗 20% 最大 HP，魔攻 +50%，持續 2 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "SELF",
@@ -369,12 +656,15 @@
       }
     ]
   },
-
   "血之荊棘": {
     "desc": "獲得反傷狀態，持續 3 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "SELF",
@@ -388,12 +678,15 @@
       }
     ]
   },
-
   "正義裁決": {
     "desc": "對單體造成 (10 + 120% 物攻) 物理傷害",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.10, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 1.8
+    },
     "buffs": [
       {
         "target": "ENEMY",
@@ -407,12 +700,15 @@
       }
     ]
   },
-
   "庇護之光": {
     "desc": "使一名友方獲得 1 回合無敵",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.03, "max_percent": 0.0 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.03,
+      "max_percent": 0.0
+    },
     "buffs": [
       {
         "target": "ALLY",
@@ -426,12 +722,15 @@
       }
     ]
   },
-
   "聖光護壁": {
     "desc": "我方全體獲得護盾 = 10% 最大 HP，持續 2 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.3 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.3
+    },
     "buffs": [
       {
         "target": "TEAM",
@@ -440,17 +739,20 @@
         "desc": "獲得護盾",
         "duration": 2,
         "effect": "ADDSHIELD",
-        "percent": 0.10,
+        "percent": 0.1,
         "base": 0
       }
     ]
   },
-
   "猛擊": {
     "desc": "對單體造成 180% 物理傷害",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.10, "max_percent": 2.2 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 2.2
+    },
     "buffs": [
       {
         "target": "ENEMY",
@@ -464,12 +766,15 @@
       }
     ]
   },
-
   "狂怒": {
     "desc": "自身物攻 +40%，但物防 -20%，持續 2 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "SELF",
@@ -478,7 +783,7 @@
         "desc": "物攻提升",
         "duration": 2,
         "effect": "ADDPATK",
-        "percent": 0.40,
+        "percent": 0.4,
         "base": 0
       },
       {
@@ -488,17 +793,20 @@
         "desc": "物防降低",
         "duration": 2,
         "effect": "ADDPDEF",
-        "percent": -0.20,
+        "percent": -0.2,
         "base": 0
       }
     ]
   },
-
   "嗜血": {
     "desc": "獲得 30% 吸血，持續 3 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "SELF",
@@ -507,17 +815,20 @@
         "desc": "吸血效果",
         "duration": 3,
         "effect": "LIFESTEAL",
-        "percent": 0.30,
+        "percent": 0.3,
         "base": 0
       }
     ]
   },
-
   "戰吼": {
     "desc": "全體爆擊率 +20%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "TEAM",
@@ -527,16 +838,19 @@
         "duration": 2,
         "effect": "ADDCRI",
         "percent": 0.0,
-        "base": 0.20
+        "base": 0.2
       }
     ]
   },
-
   "音刃": {
     "desc": "對單體造成 (10 + 120% 魔攻) 魔法傷害",
     "cd": 1,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.8
+    },
     "buffs": [
       {
         "target": "ENEMY",
@@ -550,12 +864,15 @@
       }
     ]
   },
-
   "激勵曲": {
     "desc": "我方全體 物攻 +15%、命中 +10%，持續 3 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "TEAM",
@@ -575,16 +892,19 @@
         "duration": 3,
         "effect": "ADDHIT",
         "percent": 0.0,
-        "base": 0.10
+        "base": 0.1
       }
     ]
   },
-
   "鋒芒詩": {
     "desc": "我方全體 爆擊率 +10%、爆傷 +20%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "TEAM",
@@ -594,7 +914,7 @@
         "duration": 2,
         "effect": "ADDCRI",
         "percent": 0.0,
-        "base": 0.10
+        "base": 0.1
       },
       {
         "target": "TEAM",
@@ -603,17 +923,20 @@
         "desc": "提升爆擊傷害",
         "duration": 2,
         "effect": "ADDCRIDMG",
-        "percent": 0.20,
+        "percent": 0.2,
         "base": 0
       }
     ]
   },
-
   "擾亂節拍": {
     "desc": "敵方全體命中 -50%，持續 2 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.03, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.03,
+      "max_percent": 0.5
+    },
     "buffs": [
       {
         "target": "ENEMIES",
@@ -623,215 +946,1139 @@
         "duration": 2,
         "effect": "ADDHIT",
         "percent": 0.0,
-        "base": -0.50
+        "base": -0.5
       }
     ]
-  }
-  ,
+  },
   "箭雨齊發": {
     "desc": "對敵方全體造成 90% 物理傷害",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.10, "factor": 0.85, "max_percent": 1.6 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.1,
+      "factor": 0.85,
+      "max_percent": 1.6
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "箭雨齊發", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.9, "base": 0 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "箭雨齊發",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 0.9,
+        "base": 0
+      }
     ]
   },
-
   "爆裂散射": {
     "desc": "對敵方全體造成 50% 物理 + 60% 魔法的混合傷害",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.06, "max_percent": 1.3 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.06,
+      "max_percent": 1.3
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "散射(物)", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.5, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "散射(魔)", "desc": "群體魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.6, "base": 0 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "散射(物)",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 0.5,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "散射(魔)",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.6,
+        "base": 0
+      }
     ]
   },
-
   "致命狙擊": {
     "desc": "消耗狙擊標記，每層 +25% 傷害乘數 +15 固定，加上 140% 物理基礎傷害",
     "cd": 5,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.12, "factor": 0.8, "max_percent": 1.9 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.12,
+      "factor": 0.8,
+      "max_percent": 1.9
+    },
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "致命狙擊(消耗)", "mark_key": "狙擊標記", "desc": "消耗標記", "duration": 0, "effect": "CONSUME_MARK", "percent": 0.25, "base": 15 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "致命狙擊", "desc": "單體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.4, "base": 0 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "致命狙擊(消耗)",
+        "mark_key": "狙擊標記",
+        "desc": "消耗標記",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "percent": 0.25,
+        "base": 15
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "致命狙擊",
+        "desc": "單體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.4,
+        "base": 0
+      }
     ]
   },
-
   "戰陣號令": {
     "desc": "我方全體物攻 +15%、物防 +15%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.4 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.4
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "戰陣號令(攻)", "desc": "提升物攻", "duration": 2, "effect": "ADDPATK", "percent": 0.15, "base": 0 },
-      { "target": "TEAM", "phase": "APPLY", "name": "戰陣號令(防)", "desc": "提升物防", "duration": 2, "effect": "ADDPDEF", "percent": 0.15, "base": 0 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "戰陣號令(攻)",
+        "desc": "提升物攻",
+        "duration": 2,
+        "effect": "ADDPATK",
+        "percent": 0.15,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "戰陣號令(防)",
+        "desc": "提升物防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.15,
+        "base": 0
+      }
     ]
   },
-
   "神聖結界": {
     "desc": "我方全體獲得 1 回合『無敵』，但同回合造成的傷害下降（物攻/魔攻 -30%）",
     "cd": 5,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.03, "max_percent": 0.0 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.03,
+      "max_percent": 0.0
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "神聖結界", "desc": "全體無敵", "duration": 2, "effect": "INVINCIBLE", "percent": 0.0, "base": 0 },
-      { "target": "TEAM", "phase": "APPLY", "name": "結界代價(物攻)", "desc": "傷害下降", "duration": 2, "effect": "ADDPATK", "percent": -0.30, "base": 0 },
-      { "target": "TEAM", "phase": "APPLY", "name": "結界代價(魔攻)", "desc": "傷害下降", "duration": 2, "effect": "ADDMATK", "percent": -0.30, "base": 0 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神聖結界",
+        "desc": "全體無敵",
+        "duration": 2,
+        "effect": "INVINCIBLE",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "結界代價(物攻)",
+        "desc": "傷害下降",
+        "duration": 2,
+        "effect": "ADDPATK",
+        "percent": -0.3,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "結界代價(魔攻)",
+        "desc": "傷害下降",
+        "duration": 2,
+        "effect": "ADDMATK",
+        "percent": -0.3,
+        "base": 0
+      }
     ]
   },
-
   "影步連斬": {
     "desc": "強化下一擊，對單體造成 120% + 10點 物理傷害",
     "cd": 2,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.6 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.6
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "影步", "desc": "下一擊增傷", "duration": 1, "effect": "PREP_WINDOW", "percent": 0.15, "base": 0 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "連斬", "desc": "物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.2, "base": 10 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "影步",
+        "desc": "下一擊增傷",
+        "duration": 1,
+        "effect": "PREP_WINDOW",
+        "percent": 0.15,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "連斬",
+        "desc": "物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.2,
+        "base": 10
+      }
     ]
   },
-
   "衰弱詛咒": {
     "desc": "敵方全體物防/魔防 -20%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.04, "max_percent": 0.4 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.04,
+      "max_percent": 0.4
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "衰弱(物防)", "desc": "降低物防", "duration": 2, "effect": "ADDPDEF", "percent": -0.20, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "衰弱(魔防)", "desc": "降低魔防", "duration": 2, "effect": "ADDMDEF", "percent": -0.20, "base": 0 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "衰弱(物防)",
+        "desc": "降低物防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": -0.2,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "衰弱(魔防)",
+        "desc": "降低魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": -0.2,
+        "base": 0
+      }
     ]
   },
-
   "連鎖閃電": {
     "desc": "對敵方全體造成 60% 魔法傷害，並使其命中 -10%，持續 1 回合",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.07, "max_percent": 1.6 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.07,
+      "max_percent": 1.6
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "連鎖閃電", "desc": "群體魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.6, "base": 20 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "麻痺(命中)", "desc": "命中下降", "duration": 1, "effect": "ADDHIT", "percent": 0.0, "base": -0.10 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "連鎖閃電",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.6,
+        "base": 20
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "麻痺(命中)",
+        "desc": "命中下降",
+        "duration": 1,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": -0.1
+      }
     ]
   },
-
   "血燃": {
     "desc": "自損 10% 最大生命，引燃敵方全體造成 100% + 20 魔法傷害",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.10, "factor": 0.85, "max_percent": 1.8 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.1,
+      "factor": 0.85,
+      "max_percent": 1.8
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "血燃代價", "desc": "自損生命", "duration": 0, "effect": "ADDHP", "percent": -0.10, "base": 0 },
-      {"target" : "SELF", "phase": "APPLY","name":"血蓮華","desc":"增加魔攻","duration" : 1,"effect" : "ADDMATK","percent" : "1.0","base" : 20},
-      { "target": "ENEMIES", "phase": "APPLY", "name": "血焰衝擊", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.0, "base": 20 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血燃代價",
+        "desc": "自損生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": -0.1,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血蓮華",
+        "desc": "增加魔攻",
+        "duration": 1,
+        "effect": "ADDMATK",
+        "percent": 1.0,
+        "base": 20
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "血焰衝擊",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.0,
+        "base": 20
+      }
     ]
   },
-
   "聖盾隊形": {
     "desc": "我方全體獲得 10% 最大 HP 護盾，並提升魔防 10%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.3 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.3
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "聖盾隊形(盾)", "desc": "護盾", "duration": 2, "effect": "ADDSHIELD", "percent": 0.10, "base": 0 },
-      { "target": "TEAM", "phase": "APPLY", "name": "聖盾隊形(魔防)", "desc": "提升魔防", "duration": 2, "effect": "ADDMDEF", "percent": 0.10, "base": 0 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "聖盾隊形(盾)",
+        "desc": "護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.1,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "聖盾隊形(魔防)",
+        "desc": "提升魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": 0.1,
+        "base": 0
+      }
     ]
   },
-
   "撕裂重擊": {
     "desc": "對敵方全體造成 80% 物理傷害",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.8
+    },
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "撕裂重擊", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.8, "base": 0 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "撕裂重擊",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 0.8,
+        "base": 0
+      }
     ]
   },
-
   "舒緩之歌": {
     "desc": "我方全體命中 +10%、閃避 +10%，持續 2 回合",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.4 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.4
+    },
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "舒緩之歌(命中)", "desc": "提升命中", "duration": 2, "effect": "ADDHIT", "percent": 0.0, "base": 0.10 },
-      { "target": "TEAM", "phase": "APPLY", "name": "舒緩之歌(閃避)", "desc": "提升閃避", "duration": 2, "effect": "ADDMISS", "percent": 0.0, "base": 0.10 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "舒緩之歌(命中)",
+        "desc": "提升命中",
+        "duration": 2,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": 0.1
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "舒緩之歌(閃避)",
+        "desc": "提升閃避",
+        "duration": 2,
+        "effect": "ADDMISS",
+        "percent": 0.0,
+        "base": 0.1
+      }
     ]
   },
-
   "雷·雷擊": {
     "desc": "單體 90% 魔傷並眩暈 1 回合",
-    "cd": 3, "cost": 0,
+    "cd": 3,
+    "cost": 0,
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "雷擊", "desc": "魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.9, "base": 0 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "觸電眩暈", "desc": "跳過行動", "duration": 1, "effect": "STUN" ,"percent": 0.0, "base" :0}
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "雷擊",
+        "desc": "魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.9,
+        "base": 0
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "觸電眩暈",
+        "desc": "跳過行動",
+        "duration": 1,
+        "effect": "STUN",
+        "percent": 0.0,
+        "base": 0
+      }
     ]
   },
   "護陣壁壘": {
     "desc": "為全隊施加護盾並由自身承受單點火力（嘲諷）",
-    "cd": 4, "cost": 0,
+    "cd": 4,
+    "cost": 0,
     "buffs": [
-      { "target": "TEAM", "phase": "APPLY", "name": "壁壘護盾", "desc": "隊伍護盾", "duration": 2, "effect": "ADDSHIELD", "percent": 0.12, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "壁壘挑釁", "desc": "嘲諷",     "duration": 2, "effect": "TAUNT",      "percent": 0.0,  "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "穩陣站位", "desc": "物防+",   "duration": 2, "effect": "ADDPDEF",    "percent": 0.10, "base": 0 }
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "壁壘護盾",
+        "desc": "隊伍護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.12,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "壁壘挑釁",
+        "desc": "嘲諷",
+        "duration": 2,
+        "effect": "TAUNT",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "穩陣站位",
+        "desc": "物防+",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.1,
+        "base": 0
+      }
     ]
   },
-    "鬼神降世": {
+  "鬼神降世": {
     "desc": "以自身之血換取瞬間極限輸出：消耗 99% 目前生命，獲得巨幅物攻、爆擊、爆傷加成與生命護盾與高額吸血，但雙防降為零。",
     "cd": 7,
     "cost": 0,
-    "growth": { "type": "diminish", "base_rate": 0.05, "max_percent": 0.5 },
+    "growth": {
+      "type": "diminish",
+      "base_rate": 0.05,
+      "max_percent": 0.5
+    },
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "血祭代價", "desc": "扣除 99% 當前生命", "duration": 0, "effect": "ADDHP", "percent": -0.99, "base": 0 },
-
-      { "target": "SELF", "phase": "APPLY", "name": "血祭狂怒(物攻)", "desc": "大幅提升物攻", "duration": 2, "effect": "ADDPATK", "percent": 1.5, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "血祭狂怒(爆擊)", "desc": "提升爆擊率", "duration": 2, "effect": "ADDCRI", "percent": 0.5, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "血祭狂怒(爆傷)", "desc": "提升爆擊傷害", "duration": 2, "effect": "ADDCRIDMG", "percent": 1.0, "base": 0 },
-
-      { "target": "SELF", "phase": "APPLY", "name": "血祭護盾", "desc": "獲得 50% 生命上限護盾", "duration": 2, "effect": "ADDSHIELD", "percent": 0.5, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "血祭吸血", "desc": "造成傷害時回復 80%", "duration": 2, "effect": "LIFESTEAL", "percent": 0.8, "base": 0 },
-
-      { "target": "SELF", "phase": "APPLY", "name": "血祭破綻(物防)", "desc": "物防 -100%", "duration": 2, "effect": "ADDPDEF", "percent": -1.0, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "血祭破綻(魔防)", "desc": "魔防 -100%", "duration": 2, "effect": "ADDMDEF", "percent": -1.0, "base": 0 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭代價",
+        "desc": "扣除 99% 當前生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": -0.99,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭狂怒(物攻)",
+        "desc": "大幅提升物攻",
+        "duration": 2,
+        "effect": "ADDPATK",
+        "percent": 1.5,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭狂怒(爆擊)",
+        "desc": "提升爆擊率",
+        "duration": 2,
+        "effect": "ADDCRI",
+        "percent": 0.5,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭狂怒(爆傷)",
+        "desc": "提升爆擊傷害",
+        "duration": 2,
+        "effect": "ADDCRIDMG",
+        "percent": 1.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭護盾",
+        "desc": "獲得 50% 生命上限護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.5,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭吸血",
+        "desc": "造成傷害時回復 80%",
+        "duration": 2,
+        "effect": "LIFESTEAL",
+        "percent": 0.8,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭破綻(物防)",
+        "desc": "物防 -100%",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": -1.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血祭破綻(魔防)",
+        "desc": "魔防 -100%",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": -1.0,
+        "base": 0
+      }
     ]
   },
-    "Giant_QuakeSmash": {
+  "破陣龍牙斬": {
+    "desc": "以龍牙之力突破敵陣，造成高額傷害並強化全隊",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "龍牙斬",
+        "desc": "高額物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 2.6,
+        "base": 10
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "破陣護體(物防)",
+        "desc": "提升物防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "破陣護體(魔防)",
+        "desc": "提升魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": 0.2,
+        "base": 0
+      }
+    ]
+  },
+  "Giant_QuakeSmash": {
     "desc": "巨靈以巨拳砸地，引發震波造成 180% 物理傷害並暈眩 1 回合",
     "cd": 3,
     "cost": 0,
     "buffs": [
-      { "target": "ENEMY", "phase": "APPLY", "name": "地裂重擊", "desc": "物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 1.8, "base": 15 },
-      { "target": "ENEMY", "phase": "APPLY", "name": "震暈", "desc": "暈眩效果", "duration": 1, "effect": "STUN", "percent": 0.0, "base": 0 }
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "地裂重擊",
+        "desc": "物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 1.8,
+        "base": 15
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "震暈",
+        "desc": "暈眩效果",
+        "duration": 1,
+        "effect": "STUN",
+        "percent": 0.0,
+        "base": 0
+      }
     ]
   },
-
+  "狂血天崩斧": {
+    "desc": "以狂血換取末日級輸出，自損後大範圍毀滅一切",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血代價",
+        "desc": "扣除50%當前生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": -0.5,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "天崩斧影",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 2.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血之勢(爆擊)",
+        "desc": "提升爆擊率",
+        "duration": 2,
+        "effect": "ADDCRI",
+        "percent": 0.4,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血之勢(爆傷)",
+        "desc": "提升爆擊傷害",
+        "duration": 2,
+        "effect": "ADDCRIDMG",
+        "percent": 0.8,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血吸收",
+        "desc": "吸血",
+        "duration": 2,
+        "effect": "LIFESTEAL",
+        "percent": 0.4,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血破綻(防禦)",
+        "desc": "降低雙防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": -0.5,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "狂血破綻(魔防)",
+        "desc": "降低魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": -0.5,
+        "base": 0
+      }
+    ]
+  },
+  "聖輝審判": {
+    "desc": "召喚聖輝裁決敵人，同時以光盾庇護全隊",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神聖守護",
+        "desc": "全體無敵",
+        "duration": 2,
+        "effect": "INVINCIBLE",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "聖輝嘲諷",
+        "desc": "嘲諷敵人",
+        "duration": 1,
+        "effect": "TAUNT",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "聖輝裁決",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.5,
+        "base": 20
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "聖輝戰意(攻)",
+        "desc": "提升物攻",
+        "duration": 2,
+        "effect": "ADDPATK",
+        "percent": 0.15,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "聖輝戰意(魔)",
+        "desc": "提升魔攻",
+        "duration": 2,
+        "effect": "ADDMATK",
+        "percent": 0.15,
+        "base": 0
+      }
+    ]
+  },
   "Giant_EarthRoar": {
     "desc": "巨靈怒吼震裂空氣，對全體敵人造成 70% 物魔混合傷害，並使其命中 -20%",
     "cd": 4,
     "cost": 0,
     "buffs": [
-      { "target": "ENEMIES", "phase": "APPLY", "name": "大地震盪(物)", "desc": "群體物理傷害", "duration": 0, "effect": "PHYSICDAMAGE", "percent": 0.7, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "大地震盪(魔)", "desc": "群體魔法傷害", "duration": 0, "effect": "MAGICDAMAGE", "percent": 0.7, "base": 0 },
-      { "target": "ENEMIES", "phase": "APPLY", "name": "震盪餘波", "desc": "命中下降", "duration": 1, "effect": "ADDHIT", "percent": 0.0, "base": -0.20 }
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "大地震盪(物)",
+        "desc": "群體物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 0.7,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "大地震盪(魔)",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 0.7,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "震盪餘波",
+        "desc": "命中下降",
+        "duration": 1,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": -0.2
+      }
     ]
   },
-
+  "鋼鐵方陣": {
+    "desc": "以鋼鐵軍陣庇護全隊，自身扛起所有攻勢",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "方陣護盾",
+        "desc": "大量護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "方陣堅盾(物防)",
+        "desc": "提升物防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.25,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "方陣堅盾(魔防)",
+        "desc": "提升魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": 0.25,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "方陣嘲諷",
+        "desc": "嘲諷敵人",
+        "duration": 2,
+        "effect": "TAUNT",
+        "percent": 0.0,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "方陣反震",
+        "desc": "反傷50%",
+        "duration": 2,
+        "effect": "THORNS",
+        "percent": 0.5,
+        "base": 0
+      }
+    ]
+  },
+  "星落終末箭": {
+    "desc": "消耗狙擊標記施展滅世一箭",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "終末箭(消耗)",
+        "desc": "消耗狙擊標記增傷",
+        "mark_key": "狙擊標記",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "percent": 0.4,
+        "base": 20
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "終末箭",
+        "desc": "高額物理傷害",
+        "duration": 0,
+        "effect": "PHYSICDAMAGE",
+        "percent": 2.4,
+        "base": 0
+      }
+    ]
+  },
+  "神恩降臨": {
+    "desc": "以神恩治癒全體、護盾並強化雙防",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神恩治癒",
+        "desc": "大量回復生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": 0.35,
+        "base": 20
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神恩護盾",
+        "desc": "護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.15,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神恩守護(物防)",
+        "desc": "提升物防",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "神恩守護(魔防)",
+        "desc": "提升魔防",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": 0.2,
+        "base": 0
+      }
+    ]
+  },
+  "三相共鳴·元素審判": {
+    "desc": "融合火冰雷三元素之力的終極審判",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "火元素爆燃",
+        "desc": "火傷",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 1.2,
+        "base": 10
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "冰霜束緩(命中)",
+        "desc": "命中下降",
+        "duration": 2,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": -0.2
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "雷印記(消耗)",
+        "desc": "消耗雷印記增傷",
+        "duration": 0,
+        "effect": "CONSUME_MARK",
+        "mark_key": "雷霆印記",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "元素審判",
+        "desc": "高額魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 2.0,
+        "base": 20
+      }
+    ]
+  },
+  "獅心頌": {
+    "desc": "吟唱史詩之章，全面提升全隊能力",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "獅心之力(物攻)",
+        "desc": "提升物攻",
+        "duration": 3,
+        "effect": "ADDPATK",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "獅心之智(魔攻)",
+        "desc": "提升魔攻",
+        "duration": 3,
+        "effect": "ADDMATK",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "獅心之魂(爆率)",
+        "desc": "提升爆擊率",
+        "duration": 3,
+        "effect": "ADDCRI",
+        "percent": 0.0,
+        "base": 0.15
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "獅心節奏(命中)",
+        "desc": "提升命中",
+        "duration": 3,
+        "effect": "ADDHIT",
+        "percent": 0.0,
+        "base": 0.2
+      },
+      {
+        "target": "TEAM",
+        "phase": "APPLY",
+        "name": "獅心治癒",
+        "desc": "回復生命",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": 0.2,
+        "base": 10
+      }
+    ]
+  },
+  "血月獻魂儀式": {
+    "desc": "以血祭月光，對敵方造成災厄等級傷害",
+    "cd": 6,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血月代價",
+        "desc": "扣除25%最大HP",
+        "duration": 0,
+        "effect": "ADDHP",
+        "percent": -0.25,
+        "base": 0
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "血月魔爆",
+        "desc": "群體魔法傷害",
+        "duration": 0,
+        "effect": "MAGICDAMAGE",
+        "percent": 2.0,
+        "base": 20
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "END",
+        "name": "深紅灼燒",
+        "desc": "持續傷害",
+        "duration": 3,
+        "effect": "DOT",
+        "percent": 0.08,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血月力量(魔攻)",
+        "desc": "提升魔攻",
+        "duration": 2,
+        "effect": "ADDMATK",
+        "percent": 0.6,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血月嗜虐(爆傷)",
+        "desc": "提升爆擊傷害",
+        "duration": 2,
+        "effect": "ADDCRIDMG",
+        "percent": 0.4,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "血月吸收",
+        "desc": "吸血",
+        "duration": 2,
+        "effect": "LIFESTEAL",
+        "percent": 0.4,
+        "base": 0
+      }
+    ]
+  },
   "Giant_StoneShell": {
     "desc": "巨靈將岩層凝聚在身上，獲得護盾 = 30% 最大 HP 並提升雙防 20%，持續 2 回合",
     "cd": 5,
     "cost": 0,
     "buffs": [
-      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(盾)", "desc": "護盾", "duration": 2, "effect": "ADDSHIELD", "percent": 0.30, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(物防)", "desc": "物防提升", "duration": 2, "effect": "ADDPDEF", "percent": 0.20, "base": 0 },
-      { "target": "SELF", "phase": "APPLY", "name": "岩甲護殼(魔防)", "desc": "魔防提升", "duration": 2, "effect": "ADDMDEF", "percent": 0.20, "base": 0 }
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "岩甲護殼(盾)",
+        "desc": "護盾",
+        "duration": 2,
+        "effect": "ADDSHIELD",
+        "percent": 0.3,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "岩甲護殼(物防)",
+        "desc": "物防提升",
+        "duration": 2,
+        "effect": "ADDPDEF",
+        "percent": 0.2,
+        "base": 0
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "岩甲護殼(魔防)",
+        "desc": "魔防提升",
+        "duration": 2,
+        "effect": "ADDMDEF",
+        "percent": 0.2,
+        "base": 0
+      }
     ]
   },
   "Apostle_SoulBrand": {
     "desc": "以恐懼烙印靈魂，對全體敵人施加恐懼印記與輕傷。",
     "cd": 3,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.8 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.8
+    },
     "buffs": [
       {
         "target": "ENEMIES",
@@ -855,12 +2102,16 @@
       }
     ]
   },
-
   "Apostle_RuinFlare": {
     "desc": "引爆所有恐懼烙印，依印記層數大幅提升傷害的滅世焰光。",
     "cd": 5,
     "cost": 0,
-    "growth": { "type": "burst", "base_rate": 0.12, "factor": 0.8, "max_percent": 2.2 },
+    "growth": {
+      "type": "burst",
+      "base_rate": 0.12,
+      "factor": 0.8,
+      "max_percent": 2.2
+    },
     "buffs": [
       {
         "target": "ENEMIES",
@@ -885,12 +2136,15 @@
       }
     ]
   },
-
   "Apostle_BloodThrone": {
     "desc": "從單體敵人身上抽取生命燃為王座之血，造成高額魔傷並大量自癒。",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.1, "max_percent": 2.0 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.1,
+      "max_percent": 2.0
+    },
     "buffs": [
       {
         "target": "ENEMY",
@@ -914,12 +2168,15 @@
       }
     ]
   },
-
   "Apostle_FearResonance": {
     "desc": "讓戰場上的恐懼產生共鳴，使敵方全體持續失血並動搖心志。",
     "cd": 4,
     "cost": 0,
-    "growth": { "type": "linear", "base_rate": 0.08, "max_percent": 1.6 },
+    "growth": {
+      "type": "linear",
+      "base_rate": 0.08,
+      "max_percent": 1.6
+    },
     "buffs": [
       {
         "target": "ENEMIES",
@@ -948,10 +2205,988 @@
         "desc": "物防與魔防略降（以後可拆成兩招）",
         "duration": 2,
         "effect": "ADDPDEF",
-        "percent": -0.10,
+        "percent": -0.1,
         "base": 0
       }
     ]
-}
-
+  },
+  "A2_FlameShell": {
+    "desc": "以火山能量包覆全身，形成灼熱外殼並反彈部分傷害。",
+    "cd": 3,
+    "cost": 0,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "燃炎外殼",
+        "effect": "ADDSHIELD",
+        "duration": 3,
+        "percent": 0.25,
+        "base": 0,
+        "desc": "獲得護盾"
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "火焰反彈",
+        "effect": "MAGICDAMAGE",
+        "duration": 3,
+        "percent": 0.2,
+        "base": 10,
+        "desc": "造成魔法傷害"
+      }
+    ]
+  },
+  "A2_CoreBurst": {
+    "desc": "引爆體內熔核能量，對全體造成巨量火焰傷害並附加持續灼燒。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "熔核衝擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.3,
+        "base": 35,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "END",
+        "name": "熔核灼燒",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 45,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A2_MagmaChain": {
+    "desc": "召喚熔岩鎖鏈束縛敵人，使其無法行動並受到火焰重擊。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "熔岩錘擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.4,
+        "base": 30,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "鎖鏈禁錮",
+        "effect": "STUN",
+        "duration": 1,
+        "percent": 0,
+        "base": 0,
+        "desc": "鎖鏈禁錮 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "A2_RedRebirth": {
+    "desc": "吸收火山能量迅速再生，恢復生命並強化自身防禦。",
+    "cd": 5,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "赤炎再生",
+        "effect": "ADDHP",
+        "duration": 0,
+        "percent": 0.2,
+        "base": 50,
+        "desc": "恢復生命"
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "熔甲護體",
+        "effect": "ADDPDEF",
+        "duration": 3,
+        "percent": 0.15,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "A2_BurningWill": {
+    "desc": "釋放火焰意志壓迫敵心，使其動搖失衡。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "意志崩潰(命中)",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.15,
+        "desc": "意志崩潰(命中) 效果"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "意志崩潰(攻擊)",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": -0.1,
+        "base": 0,
+        "desc": "提升物攻"
+      }
+    ],
+    "cost": 0
+  },
+  "A2_FlameGodDescent": {
+    "desc": "完全體第二使徒釋放終極火焰，焚燒萬物，殘血者將受到額外灼毀。",
+    "cd": 6,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "炎神重擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.6,
+        "base": 50,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "弱者焚滅",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.0,
+        "base": 60,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A3_FragmentBurn": {
+    "desc": "引爆封印碎片之炎，灼燒全體敵人並留下殘痕火灼。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "碎片爆燃",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.2,
+        "base": 40,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "END",
+        "name": "封印殘焰",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 35,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A3_SealBreak": {
+    "desc": "以破碎封印之力砸擊敵人，使其防禦崩解。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "封印衝擊·一段",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.0,
+        "base": 30,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "封印衝擊·二段",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "符文崩解",
+        "effect": "ADDPDEF",
+        "duration": 2,
+        "percent": -0.18,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "A3_AbyssRift": {
+    "desc": "撕裂空間形成深淵裂隙，影響敵人精神，使其難以命中攻擊。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "裂隙衝擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.1,
+        "base": 45,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "精神損蝕",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.2,
+        "desc": "精神損蝕 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "A3_FinalOverload": {
+    "desc": "釋放吞噬封印後的過量力量，對全體造成毀滅衝擊並附加隨機異常。",
+    "cd": 6,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "封印過載衝擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.6,
+        "base": 55,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "隨機狀態1",
+        "effect": "DOT",
+        "duration": 2,
+        "percent": 0,
+        "base": 25,
+        "desc": "造成持續傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "隨機狀態2",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.15,
+        "desc": "隨機狀態2 效果"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "隨機狀態3",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": -0.12,
+        "base": 0,
+        "desc": "提升物攻"
+      }
+    ],
+    "cost": 0
+  },
+  "KR_BodyQuake": {
+    "desc": "魔王殘軀猛擊地面，引發破界震盪，對全體造成巨力衝擊並降低防禦。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "破界震盪",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.25,
+        "base": 55,
+        "desc": "破界震盪 效果"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "防禦破裂",
+        "effect": "ADDPDEF",
+        "duration": 2,
+        "percent": -0.15,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "KR_ChaosFlare": {
+    "desc": "魔王殘軀釋放混沌深淵烈焰，灼燒單體敵人並留下深淵餘焰。",
+    "cd": 2,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "混沌火焰",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.35,
+        "base": 40,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "END",
+        "name": "深淵餘焰",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 30,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "KR_DarkImpulse": {
+    "desc": "魔王殘軀釋放深淵脈動，侵蝕敵軍魔力，使其在短時間內難以恢復。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "深淵脈衝",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.1,
+        "base": 50,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A1_MindCrush": {
+    "desc": "心像粉碎造成精神傷害並使敵人混亂。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "心像崩裂",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.3,
+        "base": 45,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A1_ControlPulse": {
+    "desc": "釋放強烈心靈脈衝，阻斷敵人技能發動的能力。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "心脈衝擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.15,
+        "base": 35,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A1_PhantomShatter": {
+    "desc": "幻影碎裂衝擊全體，並使命中下降。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "幻影碎裂",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.1,
+        "base": 40,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "感知扭曲",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.18,
+        "desc": "感知扭曲 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "A5_ShadowSplit": {
+    "desc": "影分裂斬造成雙重傷害並使其流血。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "影斬一段",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.0,
+        "base": 40,
+        "desc": "影斬一段 效果"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "影斬二段",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 0.7,
+        "base": 30,
+        "desc": "影斬二段 效果"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "END",
+        "name": "流血",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 18,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "A5_DarkStep": {
+    "desc": "影步襲殺造成高額傷害並使自身迴避提高。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "闇步斬殺",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.4,
+        "base": 40,
+        "desc": "闇步斬殺 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "A5_RealmPierce": {
+    "desc": "撕開影界裂縫釋放暗能穿刺波，削弱敵人的魔法防禦。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "影界穿刺波",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.2,
+        "base": 42,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "FA_DualPulse": {
+    "desc": "心像與影界能量碰撞產生雙極脈衝，震盪全場。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "雙極爆衝",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.25,
+        "base": 50,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "FA_ShadowMind": {
+    "desc": "影界侵蝕心像，造成精神扭曲與視覺錯亂。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "影心侵蝕",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.3,
+        "base": 45,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "視覺崩裂",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.15,
+        "desc": "視覺崩裂 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "FA_SyncBreak": {
+    "desc": "融合體強行撕裂心像與影界的同調界面，造成極強破滅術式。",
+    "cd": 5,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "破滅同調",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.7,
+        "base": 55,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "絕對破防",
+        "effect": "ADDPDEF",
+        "duration": 1,
+        "percent": -0.5,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "DEV_BlackRage": {
+    "desc": "黑炎注入身體，使攻擊附帶灼燒效果。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "黑炎暴走",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": 0.22,
+        "base": 0,
+        "desc": "提升物攻"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "END",
+        "name": "黑炎灼燒",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 20,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "DEV_ShieldBreak": {
+    "desc": "以巨大黑炎盾猛擊敵人並使其防禦降低。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "重盾衝擊",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.2,
+        "base": 40,
+        "desc": "重盾衝擊 效果"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "破防",
+        "effect": "ADDPDEF",
+        "duration": 2,
+        "percent": -0.18,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "DEV_DarkFlameCurse": {
+    "desc": "黑炎詛咒使敵人魔力失衡，造成灼燒並降低攻擊。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "黑炎詛咒",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 25,
+        "desc": "造成持續傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "虛弱",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": -0.15,
+        "base": 0,
+        "desc": "提升物攻"
+      }
+    ],
+    "cost": 0
+  },
+  "DUK_AbyssBurn": {
+    "desc": "深淵燃焰灼燒敵人並降低魔抗。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "深淵灼燒",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.25,
+        "base": 45,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "END",
+        "name": "深炎持續灼燒",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 25,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "DUK_ColdAbyss": {
+    "desc": "極寒深淵釋放冰炎，降低敵方命中。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "冰炎衝擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.15,
+        "base": 40,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "凍傷",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.15,
+        "desc": "凍傷 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "DUK_PhantomRend": {
+    "desc": "影界裂刃重創敵人並降低攻擊與命中。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "裂刃斬擊",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.3,
+        "base": 50,
+        "desc": "裂刃斬擊 效果"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "影腐蝕",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": -0.18,
+        "base": 0,
+        "desc": "提升物攻"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "視覺扭曲",
+        "effect": "ADDHIT",
+        "duration": 2,
+        "percent": 0,
+        "base": -0.12,
+        "desc": "視覺扭曲 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "DUK_Overburn": {
+    "desc": "燃血爆炎提升自身攻擊並使敵人灼燒。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "燃血",
+        "effect": "ADDPATK",
+        "duration": 2,
+        "percent": 0.28,
+        "base": 0,
+        "desc": "提升物攻"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "END",
+        "name": "血炎灼燒",
+        "effect": "DOT",
+        "duration": 3,
+        "percent": 0,
+        "base": 22,
+        "desc": "造成持續傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_AbyssNova": {
+    "desc": "深淵星核爆發，全體魔傷並降低抗性。",
+    "cd": 5,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "星核爆裂",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.8,
+        "base": 70,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_RuinClaw": {
+    "desc": "滅界爪擊造成巨大物理傷害並大幅破甲。",
+    "cd": 3,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "滅界爪擊",
+        "effect": "PHYSICDAMAGE",
+        "duration": 0,
+        "percent": 1.75,
+        "base": 60,
+        "desc": "滅界爪擊 效果"
+      },
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "粉碎防禦",
+        "effect": "ADDPDEF",
+        "duration": 2,
+        "percent": -0.3,
+        "base": 0,
+        "desc": "提升物防"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_SpiritCollapse": {
+    "desc": "靈魂崩解波造成精神衝擊，並附加混亂與沉默。",
+    "cd": 4,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "精神崩塌",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.3,
+        "base": 50,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_ShadowDominion": {
+    "desc": "影界支配，使自身獲得減傷、增攻、必命中。",
+    "cd": 6,
+    "buffs": [
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "魔王之力",
+        "effect": "ADDPATK",
+        "duration": 3,
+        "percent": 0.25,
+        "base": 0,
+        "desc": "提升物攻"
+      },
+      {
+        "target": "SELF",
+        "phase": "APPLY",
+        "name": "影附體",
+        "effect": "ADDHIT",
+        "duration": 3,
+        "percent": 0.25,
+        "base": 0,
+        "desc": "影附體 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_FiveForbidden": {
+    "desc": "魔王融合五禁魔法，對全場造成五連擊魔傷。",
+    "cd": 7,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "禁忌·火",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "禁忌·冰",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "禁忌·雷",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "禁忌·影",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "禁忌·心像",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 0.6,
+        "base": 20,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_AbsoluteErase": {
+    "desc": "絕對抹滅以深淵法則重寫生命，造成毀滅性的魔法傷害。",
+    "cd": 6,
+    "buffs": [
+      {
+        "target": "ENEMY",
+        "phase": "APPLY",
+        "name": "深淵抹滅",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 2.5,
+        "base": 90,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_DeepGodRoar": {
+    "desc": "深神咆嘯撕裂敵方精神，使其混亂並降低命中。",
+    "cd": 5,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "深神震擊",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.2,
+        "base": 55,
+        "desc": "造成魔法傷害"
+      },
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "視覺震盪",
+        "effect": "ADDHIT",
+        "duration": 1,
+        "percent": 0,
+        "base": -0.2,
+        "desc": "視覺震盪 效果"
+      }
+    ],
+    "cost": 0
+  },
+  "MK_HellDrain": {
+    "desc": "深淵吸魔，吸取全體生命與魔力並治癒自身。",
+    "cd": 5,
+    "buffs": [
+      {
+        "target": "ENEMIES",
+        "phase": "APPLY",
+        "name": "生命吸取",
+        "effect": "MAGICDAMAGE",
+        "duration": 0,
+        "percent": 1.1,
+        "base": 40,
+        "desc": "造成魔法傷害"
+      }
+    ],
+    "cost": 0
+  }
 }

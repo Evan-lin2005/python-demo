@@ -40,7 +40,7 @@
     ],
     "battle_king_possessed": [
       { "name": "被附生的國王", "job": "Paladin" ,"level" : 8},
-      { "name": "使徒殘影", "job": "Sorcerer" ,"level" : 15},
+      { "name": "使徒殘影", "job": "Sorcerer" ,"level" : 10},
       { "name": "黑環護衛", "job": "Paladin" ,"level" : 7}
     ]
   },
@@ -167,6 +167,321 @@
       "job": "Warrior",
       "level": 16,
       "feature": "TANK"
+    }
+    ]
+  },
+  "chapter6": {
+    "battle_ch6_blockade_1": [
+      { "name": "熔岩前鋒",   "job": "Warrior",     "level": 18, "feature": "TANK"   },
+      { "name": "熔核狂兵",   "job": "Berserker",   "level": 18, "feature": "DPS"    },
+      { "name": "炎脈咒術師", "job": "Sorcerer",    "level": 18, "feature": "SUPPORT"}
+    ],
+
+    "battle_ch6_blockade_2": [
+      { "name": "深淵斬首兵", "job": "Assassin",    "level": 19, "feature": "DPS"    },
+      { "name": "熔岩盾衛",   "job": "Paladin",     "level": 19, "feature": "TANK"   },
+      { "name": "火殞祭司",   "job": "BloodMage",   "level": 19, "feature": "SUPPORT"}
+    ],
+
+    "battle_ch6_blockade_3": [
+      { "name": "魔炎軍團長", "job": "Paladin",     "level": 20, "feature": "TANK"   },
+      { "name": "地獄熔核者", "job": "Elementalist","level": 20, "feature": "DPS"    },
+      { "name": "熔岩狂信徒", "job": "Berserker",   "level": 20, "feature": "DPS"    },
+      { "name": "深淵詛咒師", "job": "BloodMage",   "level": 20, "feature": "SUPPORT"}
+    ],
+
+    "battle_ch6_regent_meat": [
+      {
+        "name": "攝政王殘渣",
+        "job": "BloodMage",
+        "level": 21,
+        "feature": "DPS",
+        "skills": [
+          "血斬",
+          "血之獻祭",
+          "血之荊棘",
+          "血燃"
+        ]
+      },
+      {
+        "name": "肉塊觸手",
+        "job": "Warrior",
+        "level": 20,
+        "feature": "TANK"
+      },
+      {
+        "name": "肉塊孢子",
+        "job": "Sorcerer",
+        "level": 20,
+        "feature": "SUPPORT"
+      }
+    ],
+
+    "battle_ch6_escape_enemies": [
+      { "name": "熔炎追獵者", "job": "Assassin",    "level": 20, "feature": "DPS"    },
+      { "name": "岩殼護衛",   "job": "Paladin",     "level": 20, "feature": "TANK"   },
+      { "name": "爆焰術士",   "job": "Elementalist","level": 21, "feature": "DPS"    },
+      { "name": "深淵號角手", "job": "Bard",        "level": 19, "feature": "SUPPORT"}
+    ]
+  },
+  "chapter7": {
+    "battle_ch7_gorge_1": [
+      { "name": "深淵斬衛", "job": "Warrior", "level": 20, "feature": "TANK" },
+      { "name": "熔岩尖兵", "job": "Berserker", "level": 19, "feature": "DPS" },
+      { "name": "深淵鎖魂師", "job": "Sorcerer", "level": 19, "feature": "SUPPORT" }
+    ],
+
+    "battle_ch7_gorge_2": [
+      { "name": "熔炎騎士團長", "job": "Paladin", "level": 21, "feature": "TANK" },
+      { "name": "岩脈術士", "job": "Elementalist", "level": 20, "feature": "DPS" },
+      { "name": "深淵影徒", "job": "Assassin", "level": 20, "feature": "DPS" }
+    ],
+
+    "battle_ch7_gorge_3": [
+      { "name": "第三使徒·幻影", "job": "Sorcerer", "level": 22, "feature": "DPS" }
+    ],
+
+    "battle_ch7_apostle3_blocked": [
+      { "name": "第三使徒（壓制中）", "job": "Sorcerer", "level": 25, "feature": "DPS" }
+    ],
+
+    "battle_ch7_elite_escort": [
+      { "name": "熔核守衛者", "job": "Warrior", "level": 21, "feature": "TANK" },
+      { "name": "火脈祭儀兵", "job": "BloodMage", "level": 20, "feature": "SUPPORT" }
+    ],
+
+    "battle_ch7_second_apostle": [
+      {
+        "name": "第二使徒·完全體",
+        "job": "Elementalist",
+        "level": 24,
+        "feature": "DPS",
+        "skills": [
+          "A2_FlameShell",
+          "A2_CoreBurst",
+          "A2_MagmaChain",
+          "A2_RedRebirth",
+          "A2_BurningWill",
+          "A2_FlameGodDescent"
+        ]
+      }
+    ]
+  },
+  "chapter8": {
+    "battle_ch8_corrupted_soldiers": [
+      { "name": "精神污染士兵", "job": "Warrior", "level": 20, "feature": "DPS" },
+      { "name": "淪陷近衛", "job": "Paladin", "level": 19, "feature": "TANK" },
+      { "name": "瘋狂哨兵", "job": "Berserker", "level": 19, "feature": "DPS" }
+    ],
+
+    "battle_ch8_seal_beasts": [
+      { "name": "封印火骨獸", "job": "Elementalist", "level": 21, "feature": "DPS" },
+      { "name": "符文殘炎獸", "job": "Sorcerer", "level": 21, "feature": "SUPPORT" }
+    ],
+
+    "battle_ch8_seal_guardian": [
+      { "name": "封印守護者殘影", "job": "Paladin", "level": 22, "feature": "TANK" }
+    ],
+
+    "battle_ch8_apostle3_shadow": [
+      { "name": "第三使徒·影子", "job": "Sorcerer", "level": 22, "feature": "DPS" }
+    ],
+
+    "battle_ch8_apostle3_final": [
+      {
+        "name": "第三使徒·封印崩裂形態",
+        "job": "Elementalist",
+        "level": 25,
+        "feature": "DPS",
+        "skills": [
+          "A3_FragmentBurn",
+          "A3_SealBreak",
+          "A3_AbyssRift",
+          "A3_FinalOverload"
+        ]
+      }
+    ]
+  },
+  "chapter9": {
+
+  "battle_ch9_shadow_beasts": [
+    { "name": "影獸·裂影", "job": "Assassin", "level": 30, "feature": "DPS" },
+    { "name": "影獸·破形", "job": "Warrior", "level": 30, "feature": "TANK" }
+  ],
+
+  "battle_ch9_mind_phantoms": [
+    { "name": "心像幻兵", "job": "Sorcerer", "level": 35, "feature": "DPS" },
+    { "name": "心像殘形", "job": "Cleric", "level": 35, "feature": "SUPPORT" }
+  ],
+
+  "battle_ch9_demon_line": [
+    { "name": "魔族戰兵", "job": "Warrior", "level": 40, "feature": "DPS" },
+    { "name": "魔族重衛", "job": "Paladin", "level": 42, "feature": "TANK" },
+    { "name": "魔族血咒師", "job": "Sorcerer", "level": 44, "feature": "SUPPORT" }
+  ],
+
+  "battle_ch9_apostle1": [
+    {
+      "name": "第一使徒·心像軀體",
+      "job": "Sorcerer",
+      "level": 50,
+      "feature": "DPS",
+      "skills": [
+        "A1_MindCrush",
+        "A1_PhantomShatter",
+        "A1_ControlPulse"
+      ]
+    }
+  ],
+
+  "battle_ch9_apostle5": [
+    {
+      "name": "第五使徒·影界軀體",
+      "job": "Assassin",
+      "level": 50,
+      "feature": "DPS",
+      "skills": [
+        "A5_ShadowSplit",
+        "A5_DarkStep",
+        "A5_RealmPierce"
+      ]
+    }
+  ],
+
+  "battle_ch9_fused_apostles": [
+    {
+      "name": "使徒回聲·雙極殘形",
+      "job": "Elementalist",
+      "level": 55,
+      "feature": "DPS",
+      "skills": [
+        "FA_DualPulse",
+        "FA_ShadowMind",
+        "FA_SyncBreak"
+      ]
+    }
+  ],
+
+  "battle_ch9_king_remnant": [
+    {
+      "name": "魔王殘軀·震動形",
+      "job": "Elementalist",
+      "level": 60,
+      "feature": "TANK",
+      "skills": [
+        "KR_BodyQuake",
+        "KR_ChaosFlare",
+        "KR_DarkImpulse"
+      ]
+    }
+  ],
+
+  "battle_ch9_pretrue_king": [
+      {
+        "name": "魔王本影·初現",
+        "job": "Elementalist",
+        "level": 70,
+        "feature": "DPS",
+        "skills": [
+          "TK_NullSlash",
+          "TK_AbyssWave",
+          "TK_PhaseBreak"
+        ]
+      }
+    ]
+  },
+  "chapter10": {
+
+  "battle_ch10_demon_vanguard": [
+    {
+      "name": "魔族狂戰士·黑炎型",
+      "job": "Berserker",
+      "level": 60,
+      "feature": "DPS",
+      "skills": ["DEV_BlackRage"]
+    },
+    {
+      "name": "魔族重盾兵·增幅體",
+      "job": "Paladin",
+      "level": 60,
+      "feature": "TANK",
+      "skills": ["DEV_ShieldBreak"]
+    },
+    {
+      "name": "魔族黑炎咒師",
+      "job": "Sorcerer",
+      "level": 60,
+      "feature": "SUPPORT",
+      "skills": ["DEV_DarkFlameCurse"]
+    }
+  ],
+
+  "battle_ch10_swordmaster_shadow": [
+    {
+      "name": "第一使徒·殘軀",
+      "job": "Sorcerer",
+      "level": 65,
+      "feature": "DPS",
+      "skills": ["A1_MindCrush", "A1_PhantomShatter"]
+    },
+    {
+      "name": "第五使徒·殘軀",
+      "job": "Assassin",
+      "level": 65,
+      "feature": "DPS",
+      "skills": ["A5_ShadowSplit", "A5_DarkStep"]
+    }
+  ],
+
+  "battle_ch10_four_dukes": [
+    {
+      "name": "炎角大公·深淵熾燃形",
+      "job": "Warrior",
+      "level": 75,
+      "feature": "DPS",
+      "skills": ["DUK_AbyssBurn"]
+    },
+    {
+      "name": "霜刃大公·極寒黑炎形",
+      "job": "IceKnight",
+      "level": 75,
+      "feature": "TANK",
+      "skills": ["DUK_ColdAbyss"]
+    },
+    {
+      "name": "影蹄大公·影界裂隙形",
+      "job": "Assassin",
+      "level": 75,
+      "feature": "DPS",
+      "skills": ["DUK_PhantomRend"]
+    },
+    {
+      "name": "赤翼大公·血炎狂怒形",
+      "job": "Berserker",
+      "level": 75,
+      "feature": "DPS",
+      "skills": ["DUK_Overburn"]
+    }
+  ],
+
+  "battle_ch10_demonking_final": [
+    {
+      "name": "魔王·深淵本體",
+      "job": "FinalDemonKing",
+      "level": 100,
+      "feature": "DPS",
+      "skills": [
+        "物理普攻",
+        "魔法普攻",
+        "MK_AbyssNova",
+        "MK_RuinClaw",
+        "MK_SpiritCollapse",
+        "MK_ShadowDominion",
+        "MK_FiveForbidden",
+        "MK_AbsoluteErase",
+        "MK_DeepGodRoar",
+        "MK_HellDrain"
+      ]
     }
   ]
 }

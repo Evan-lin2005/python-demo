@@ -80,7 +80,6 @@ def main():
     # ===== 9) 自動存檔機制=====
     def auto_save(ev, ctx):
         SaveManager.save_game(allies, story_node_id=getattr(sm, "curr", None))
-        ui.call_on_ui(ui.append_log, "💾 自動存檔完成")
     event_manager.subscribe(EventType.TURN_END, auto_save, priority=-999, owner="AUTO_SAVE")
 
     # ===== 10) 啟動 Tk 主迴圈 =====
